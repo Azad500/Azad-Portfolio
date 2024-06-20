@@ -1,0 +1,66 @@
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  .headerPhoto {
+    width: auto;
+    height: auto;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .image {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 0;
+    }
+  }
+  .headerText {
+    position: absolute;
+    bottom: 10%;
+    left: 3%;
+    z-index: 3;
+    width: 90%;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    h2:first-child {
+      animation: slideRight 2s ease-in-out;
+    }
+    h2:last-child {
+      animation: slideRight 4s ease-in-out;
+    }
+    span {
+      color: yellow;
+    }
+  }
+  @keyframes slideRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  .borderBottom {
+    position: absolute;
+    width: 100%;
+    bottom: 7%;
+    z-index: 1;
+    p {
+      width: 95%;
+      height: 10px;
+      margin: 0 auto;
+      border-radius: 10px;
+      background-color: yellow;
+      animation: slideRight 2s ease-in-out;
+    }
+  }
+}

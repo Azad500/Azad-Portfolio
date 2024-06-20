@@ -1,0 +1,144 @@
+.workHistoryContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  position: relative;
+  background-image: url(../../../assets/images/workHistorybg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  .leftSide {
+    width: 100%;
+    height: 80vh;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    .upSideElement {
+      div:first-child {
+        h3 {
+          font-family: "Poppins";
+          font-size: 50px;
+          font-weight: bold;
+        }
+        h2 {
+          font-family: "Poppins";
+          font-size: 100px;
+          font-weight: bold;
+        }
+      }
+      div:last-child {
+        position: absolute;
+        top: 35%;
+        right: 15%;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .image {
+          width: 300px;
+          height: 300px;
+          border-radius: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .downSideElement {
+      display: flex;
+      align-items: start;
+      gap: 70px;
+      margin-top: 50px;
+      p {
+        font-family: "Poppins";
+        font-size: 24px;
+        font-weight: bold;
+      }
+      h4 {
+        width: 400px;
+        font-family: "Poppins";
+        font-size: 18px;
+        font-weight: 400;
+        text-align: justify;
+        margin-top: 20px;
+      }
+    }
+  }
+  // -----------slider-----------
+  .rightSide {
+    height: 100vh;
+    overflow: scroll;
+    list-style: none;
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 100px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    li {
+      position: relative;
+      .aboutWork {
+        width: 600px;
+        background-color: black;
+        border-radius: 5px;
+        border: 1px solid rgb(166, 166, 166);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+        p {
+          font-family: "Poppins";
+        }
+        p:first-child {
+          color: white;
+          font-size: 18px;
+        }
+        p:nth-child(2) {
+          color: #facb1c;
+          font-style: italic;
+          font-size: 16px;
+        }
+        p:nth-child(3) {
+          color: white;
+          text-align: justify;
+          font-size: 14px;
+        }
+        span {
+          color: #facb1c;
+          font-size: 12px;
+        }
+        a {
+          text-decoration: none;
+          font-size: 12px;
+          color: white;
+          transition: all 0.3s ease;
+          &:hover {
+            color: #facb1c;
+            transform: scale(1.03);
+          }
+        }
+      }
+      .workLogo {
+        position: absolute;
+        bottom: -50px;
+        right: 50px;
+        border: 1px solid rgb(166, 166, 166);
+        border-radius: 100%;
+        width: 100px;
+        height: 100px;
+        .workImage {
+          width: 100px;
+          height: 100px;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+}

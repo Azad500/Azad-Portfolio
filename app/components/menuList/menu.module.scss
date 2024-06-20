@@ -1,0 +1,163 @@
+.menuListContainer {
+  width: 350px;
+  height: 61vh;
+  background-color: black;
+  border-radius: 15px;
+  .xElement {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    .languagePart {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      li {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover,
+        &:hover p {
+          transform: scale(1.1);
+          color: yellow;
+        }
+        .langImage {
+          width: 20px;
+        }
+        p {
+          color: white;
+          font-size: 14px;
+          font-family: "Poppins";
+          font-weight: bold;
+          transition: all 0.3s ease;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    .xIcon {
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+      transition: all 0.3s ease;
+      &:hover {
+        transform: scale(1.1);
+        color: yellow;
+      }
+    }
+  }
+  .menuElement {
+    opacity: 0;
+    .listElement {
+      list-style: none;
+      color: white;
+      padding: 10px 0 10px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 10px;
+      li {
+        transition: all 0.3s ease;
+        p {
+          color: white;
+          text-decoration: none;
+          cursor: pointer;
+          position: relative;
+          font-size: 24px;
+          font-family: "Poppins";
+          font-weight: bold;
+          &::after {
+            content: "";
+            width: 0;
+            height: 3px;
+            background-color: yellow;
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            transition: 0.5s;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+          &:hover {
+            color: yellow;
+          }
+        }
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    // ----------sosial-network---------
+    .sosialNetwork {
+      height: 110px;
+      color: white;
+      list-style: none;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      li:first-child {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          a {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: "Poppins";
+            font-weight: 300;
+            text-decoration: none;
+            color: white;
+            &:hover {
+              color: yellow;
+              transform: scale(1.02);
+            }
+          }
+        }
+      }
+      li:last-child {
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        p {
+          color: black;
+          font-family: "Poppins";
+          font-weight: bold;
+        }
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  .active {
+    opacity: 1;
+    animation: slideUp 2.5s ease forwards;
+  }
+  .close {
+    opacity: 0;
+  }
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

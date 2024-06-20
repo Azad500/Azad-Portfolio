@@ -1,0 +1,71 @@
+.aboutContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: #f6f6ef;
+  overflow: hidden;
+  .aboutElement {
+    width: 95%;
+    height: 85vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    div:first-child {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      h2 {
+        font-size: 50px;
+        font-weight: bold;
+        font-family: "Poppins";
+        color: black;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 300;
+        font-family: "Poppins";
+        text-align: justify;
+        color: black;
+      }
+    }
+    .logoElement {
+      width: auto;
+      height: auto;
+      position: absolute;
+      left: 10%;
+      bottom: 5%;
+      .logo {
+        width: 300px;
+        height: 300px;
+        rotate: -30deg;
+      }
+    }
+    .justImage {
+      width: 60%;
+      height: 85vh;
+      background-color: #facb1c;
+      border-radius: 100%;
+      position: absolute;
+      bottom: -10%;
+      right: -12%;
+      z-index: 0;
+      display: flex;
+      justify-content: flex-end;
+      div {
+        width: 60%;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        .image {
+          width: 100%;
+          height: 700px;
+        }
+      }
+    }
+  }
+}
