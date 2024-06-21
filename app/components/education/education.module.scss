@@ -1,0 +1,146 @@
+.educationContainer {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../../assets/images/Educationbg.png);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  .leftSide {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+    padding-left: 40px;
+    h2 {
+      font-family: "Poppins";
+      font-weight: bold;
+      font-size: 80px;
+    }
+    p {
+      width: 350px;
+      font-family: "Poppins";
+      font-size: 16px;
+      text-align: justify;
+    }
+  }
+  // -----------slider--------
+  .slider {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 100px;
+    padding-right: 100px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .sliderTransparent {
+      width: 700px;
+      padding: 300px 0;
+      position: relative;
+      background-color: transparent;
+    }
+    .sliderElement {
+      width: 700px;
+      height: 400px;
+      position: relative;
+      .educationImageElement {
+        width: 750px;
+        height: 450px;
+        border-radius: 30px;
+        .educationImage {
+          width: 750px;
+          height: 450px;
+          object-fit: cover;
+          border-radius: 30px;
+        }
+      }
+      .halfCircle {
+        position: absolute;
+        top: 0;
+        width: 450px;
+        height: 450px;
+        border-radius: 30px;
+        .educationCart {
+          width: 450px;
+          height: 450px;
+          border-radius: 30px;
+        }
+      }
+      .educationText {
+        position: absolute;
+        bottom: 0;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 10px;
+        font-family: "Poppins";
+        padding: 15px;
+        font-size: 14px;
+        span {
+          color: #facb1c;
+        }
+        p {
+          width: 320px;
+        }
+        a {
+          text-decoration: none;
+          color: white;
+          transition: all 0.3s ease;
+          &:hover {
+            transform: scale(1.05);
+            color: #facb1c;
+          }
+        }
+      }
+    }
+    .sliderElement:first-of-type {
+      position: sticky;
+      top: 20%;
+      z-index: 1;
+      margin-bottom: 170px;
+    }
+    .sliderElement:nth-of-type(2) {
+      position: sticky;
+      top: 20%;
+      z-index: 2;
+    }
+    .sliderElement:nth-of-type(3) {
+      position: sticky;
+      top: 20%;
+      z-index: 3;
+    }
+    .sliderElement:nth-of-type(4) {
+      position: sticky;
+      top: 20%;
+      z-index: 4;
+    }
+    .sliderElement:nth-of-type(5) {
+      position: sticky;
+      top: 20%;
+      z-index: 5;
+    }
+    .sliderElement:nth-of-type(6) {
+      position: sticky;
+      top: 20%;
+      z-index: 6;
+    }
+    .sliderElement:nth-of-type(7) {
+      position: sticky;
+      top: 20%;
+      z-index: 7;
+    }
+    .sliderTransparent {
+      z-index: 100;
+    }
+  }
+}

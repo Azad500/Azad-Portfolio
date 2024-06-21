@@ -19,7 +19,7 @@ export default function Header() {
       <div className={styles.headerText}>
         <h2>Hello,</h2>
         <h2>
-          I am <span>Full Stack Developer</span>
+          I am <span>Front end Developer</span>
         </h2>
       </div>
       <div className={styles.borderBottom}>

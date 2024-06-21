@@ -61,13 +61,17 @@
         width: 35px;
         height: 35px;
       }
-
       .blackIcon {
-        display: none;
+        display: block;
       }
-
       .whiteIcon {
         display: block;
+      }
+      .whiteIconClose {
+        display: none;
+      }
+      .blackIconClose {
+        display: none;
       }
     }
     .rotate {

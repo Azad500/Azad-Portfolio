@@ -10,6 +10,8 @@ interface MenuListProps {
   handleAboutRef: () => void;
   handleSkillsRef: () => void;
   handleWorkHistoryRef: () => void;
+  handleEducationRef: () => void;
+  handleCertificationsRef: () => void;
 }
 
 export default function MenuList({
@@ -19,6 +21,8 @@ export default function MenuList({
   handleAboutRef,
   handleSkillsRef,
   handleWorkHistoryRef,
+  handleEducationRef,
+  handleCertificationsRef,
 }: MenuListProps) {
   return (
     <section className={styles.menuListContainer}>
@@ -69,11 +73,14 @@ export default function MenuList({
           <li onClick={handleWorkHistoryRef}>
             <p>Work History</p>
           </li>
-          <li>
+          <li onClick={handleEducationRef}>
             <p>Education</p>
           </li>
-          <li>
+          <li onClick={handleCertificationsRef}>
             <p>Certifications</p>
+          </li>
+          <li>
+            <p>Projects</p>
           </li>
           <li>
             <p>Languages</p>

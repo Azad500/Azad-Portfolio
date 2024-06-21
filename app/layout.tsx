@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   description: "Azad Mirzazada is a Front-end developer",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,7 +28,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body suppressHydrationWarning={true} className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning={true}>
         {children}
       </body>
     </html>

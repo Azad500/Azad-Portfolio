@@ -6,44 +6,76 @@ import MenuList from "../menuList/menu";
 
 interface NavbarProps {
   openMenu: boolean;
+  changeColor: boolean;
+  whiteText: boolean;
   toggleMenu: () => void;
   handleHomeRef: () => void;
   handleAboutRef: () => void;
   handleSkillsRef: () => void;
   handleWorkHistoryRef: () => void;
+  handleEducationRef: () => void;
+  handleCertificationsRef:()=>void;
 }
 
 export default function Navbar({
   openMenu,
+  changeColor,
+  whiteText,
   toggleMenu,
   handleHomeRef,
   handleAboutRef,
   handleSkillsRef,
   handleWorkHistoryRef,
+  handleEducationRef,
+  handleCertificationsRef,
 }: NavbarProps) {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbarElement}>
         <div className={styles.name}>
-          <h1 className={styles.yellowPoint}>Azad</h1>
-          <span className={styles.whiteText}>Mirzazada</span>
-          <span className={styles.yellowPoint}>.</span>
+          {whiteText ? (
+            <h1
+              className={changeColor ? styles.yellowPoint : styles.darkYellow}
+            >
+              Azad
+            </h1>
+          ) : (
+            <h1 className={changeColor ? styles.yellowPoint : styles.whiteText}>
+              Azad
+            </h1>
+          )}
+          <span className={changeColor ? styles.whiteText : styles.blackText}>
+            Mirzazada
+          </span>
+          {whiteText ? (
+            <span
+              className={changeColor ? styles.yellowPoint : styles.darkYellow}
+            >
+              .
+            </span>
+          ) : (
+            <span
+              className={changeColor ? styles.yellowPoint : styles.whiteText}
+            >
+              .
+            </span>
+          )}
         </div>
         <div
           className={`${styles.loginPart} ${openMenu ? styles.rotate : ""}`}
           onClick={toggleMenu}
         >
           <Image
-            className={styles.blackIcon}
-            src={hamburgerBlack}
+            className={changeColor ? styles.whiteIcon : styles.whiteIconClose}
+            src={hamburgerWhite}
             alt="Menu"
             width={35}
             height={35}
             priority
           />
           <Image
-            className={styles.whiteIcon}
-            src={hamburgerWhite}
+            className={!changeColor ? styles.blackIcon : styles.blackIconClose}
+            src={hamburgerBlack}
             alt="Menu"
             width={35}
             height={35}
@@ -62,6 +94,8 @@ export default function Navbar({
             handleAboutRef={handleAboutRef}
             handleSkillsRef={handleSkillsRef}
             handleWorkHistoryRef={handleWorkHistoryRef}
+            handleEducationRef={handleEducationRef}
+            handleCertificationsRef={handleCertificationsRef}
           />
         </div>
       </div>
