@@ -58,7 +58,6 @@ export default function Home() {
   const handleCertificationsRef = () => {
     certificationsRef.current?.scrollIntoView({ behavior: "smooth" });
     toggleMenu();
-    setChangeColor(false);
     setWhiteText(true);
   };
 
