@@ -8,6 +8,7 @@ import About from "./components/about/about";
 import WorkHistory from "./components/workHistory/workHistory";
 import Education from "./components/education/education";
 import Certifications from "./components/certifications/certifications";
+import Projects from "./components/projects/projects";
 
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -19,6 +20,7 @@ export default function Home() {
   const workHistoryRef = useRef<HTMLDivElement>(null);
   const educationRef = useRef<HTMLDivElement>(null);
   const certificationsRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
@@ -60,6 +62,12 @@ export default function Home() {
     toggleMenu();
     setWhiteText(true);
   };
+  const handleProjectsRef = () => {
+    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+    toggleMenu();
+    setChangeColor(true);
+    setWhiteText(false);
+  };
 
   return (
     <div className="fullpage-container">
@@ -72,6 +80,7 @@ export default function Home() {
         handleWorkHistoryRef={handleWorkHistoryRef}
         handleEducationRef={handleEducationRef}
         handleCertificationsRef={handleCertificationsRef}
+        handleProjectsRef={handleProjectsRef}
         changeColor={changeColor}
         whiteText={whiteText}
       />
@@ -92,6 +101,9 @@ export default function Home() {
       </div>
       <div ref={certificationsRef} className="section">
         <Certifications />
+      </div>
+      <div ref={projectsRef} className="section">
+        <Projects />
       </div>
     </div>
   );

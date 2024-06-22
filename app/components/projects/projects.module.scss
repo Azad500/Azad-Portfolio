@@ -1,0 +1,80 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    #e6b919 0%,
+    #c09b16 20%,
+    #9a7c12 40%,
+    #705b0d 60%,
+    #504009 80%,
+    #241c04 100%
+  );
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  .portfolioTexts {
+    width: 45%;
+    height: 90vh;
+    padding-left: 40px;
+    .portfolioContainer {
+      h2 {
+        font-family: "Poppins";
+        color: black;
+        font-size: 70px;
+        font-weight: bold;
+      }
+      .portfolioPart {
+        width: 350px;
+        padding: 10px 20px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        margin-bottom: 30px;
+        background-color: white;
+        border-radius: 10px;
+        li:first-child {
+          margin-bottom: 10px;
+          cursor: default;
+          &:hover {
+            transform: scale(1);
+          }
+          h3 {
+            font-size: 24px;
+            font-style: italic;
+            font-family: "Poppins";
+            color: black;
+          }
+        }
+        li {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          &:hover {
+            transform: scale(1.1);
+          }
+          .imageElement {
+            width: 62px;
+            height: 42px;
+            border-radius: 10px;
+            border: 1px solid black;
+            .image {
+              width: 60px;
+              height: 40px;
+              border-radius: 10px;
+            }
+          }
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
