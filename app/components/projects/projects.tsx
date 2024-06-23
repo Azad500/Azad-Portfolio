@@ -4,6 +4,24 @@ import styles from "./projects.module.scss";
 import GarantCompressor from "../../../assets/projects/GarantCompressor.png";
 import Webrandy from "../../../assets/projects/Webrandy.png";
 
+const freelanceElement = [
+  {
+    image: GarantCompressor,
+    alt: "Garant Compressor",
+    link: "https://garantcompressor.com/",
+    site: "garantcompressor.com",
+  },
+];
+
+const webrandyStartuup = [
+  {
+    image: Webrandy,
+    alt: "Webrandy Startup",
+    link: "https://webrandy.com/",
+    site: "webrandy.com",
+  },
+];
+
 export default function Projects() {
   return (
     <section className={styles.container}>
@@ -15,42 +33,46 @@ export default function Projects() {
             <li>
               <h3>Freelance</h3>
             </li>
-            <li>
-              <div className={styles.imageElement}>
-                <Image
-                  className={styles.image}
-                  src={GarantCompressor}
-                  alt="Garant Compressor"
-                  width={400}
-                  height={400}
-                  priority
-                />
-              </div>
-              <a target="_blank" href="https://garantcompressor.com/">
-                garantcompressor.com
-              </a>
-            </li>
+            {freelanceElement.map((element, index) => (
+              <li key={index}>
+                <div className={styles.imageElement}>
+                  <Image
+                    className={styles.image}
+                    src={element.image}
+                    alt={element.alt}
+                    width={400}
+                    height={400}
+                    priority
+                  />
+                </div>
+                <a target="_blank" href={element.link}>
+                  {element.site}
+                </a>
+              </li>
+            ))}
           </ul>
           {/* ---------------------- */}
           <ul className={styles.portfolioPart}>
             <li>
               <h3>Webrandy Startup</h3>
             </li>
-            <li>
-              <div className={styles.imageElement}>
-                <Image
-                  className={styles.image}
-                  src={Webrandy}
-                  alt="Webrandy"
-                  width={400}
-                  height={400}
-                  priority
-                />
-              </div>
-              <a target="_blank" href="https://webrandy.com/">
-                webrandy.com
-              </a>
-            </li>
+            {webrandyStartuup.map((element, index) => (
+              <li key={index}>
+                <div className={styles.imageElement}>
+                  <Image
+                    className={styles.image}
+                    src={element.image}
+                    alt={element.alt}
+                    width={400}
+                    height={400}
+                    priority
+                  />
+                </div>
+                <a target="_blank" href={element.link}>
+                  {element.site}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
