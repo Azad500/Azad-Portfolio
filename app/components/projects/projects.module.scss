@@ -16,28 +16,27 @@
   align-items: flex-end;
   .portfolioTexts {
     width: 45%;
-    height: 90vh;
+    height: 92vh;
     padding-left: 40px;
     .portfolioContainer {
       h2 {
         font-family: "Poppins";
         color: black;
-        font-size: 70px;
+        font-size: 50px;
         font-weight: bold;
       }
       .portfolioPart {
-        width: 350px;
-        padding: 10px 20px;
+        width: 400px;
         list-style: none;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 5px;
-        margin-bottom: 30px;
+        gap: 15px;
+        margin-bottom: 10px;
         background-color: white;
         border-radius: 10px;
+        padding-bottom: 5px;
         li:first-child {
-          margin-bottom: 10px;
           cursor: default;
           &:hover {
             transform: scale(1);
@@ -47,31 +46,41 @@
             font-style: italic;
             font-family: "Poppins";
             color: black;
+            padding-left: 20px;
           }
         }
-        li {
+        .elements {
+          width: 100%;
+          height: 100px;
           display: flex;
-          align-items: center;
+          flex-direction: column;
           gap: 10px;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          &:hover {
-            transform: scale(1.1);
-          }
-          .imageElement {
-            width: 62px;
-            height: 42px;
-            border-radius: 10px;
-            border: 1px solid black;
-            .image {
-              width: 60px;
-              height: 40px;
-              border-radius: 10px;
+          overflow-y: auto;
+          padding: 0 20px;
+          .imageContainer {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            &:hover {
+              transform: scale(1.04);
             }
-          }
-          a {
-            text-decoration: none;
-            color: black;
+            .imageElement {
+              width: 62px;
+              height: 42px;
+              border-radius: 10px;
+              border: 1px solid black;
+              .image {
+                width: 60px;
+                height: 40px;
+                border-radius: 10px;
+              }
+            }
+            a {
+              text-decoration: none;
+              color: black;
+            }
           }
         }
       }

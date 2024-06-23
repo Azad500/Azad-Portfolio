@@ -22,4 +22,5 @@ html,
 body {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  
 }
