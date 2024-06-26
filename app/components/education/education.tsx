@@ -111,18 +111,23 @@ const educationElement = [
     educationImageAlt: "School",
   },
 ];
+const educationPart = [
+  {
+    header: "EDUCATION",
+    educationText:
+      "After completing 11 years of secondary education, 6 years of university (4 years of bachelor's and 2 years of master's), I started to receive the necessary training for my working life and I am still continuing.",
+  },
+];
 export default function Education() {
+  const elements = educationPart.find((element) => element.header);
   return (
     <section className={styles.educationContainer}>
-      <div className={styles.leftSide}>
-        <h2>EDUCATION</h2>
-        <p>
-          After completing 11 years of secondary education, 6 years of
-          university (4 years of bachelor's and 2 years of master's), I started
-          to receive the necessary training for my working life and I am still
-          continuing.
-        </p>
-      </div>
+      {elements && (
+        <div className={styles.leftSide}>
+          <h2>{elements.header}</h2>
+          <p>{elements.educationText}</p>
+        </div>
+      )}
       {/* -----------slider------------- */}
       <div className={styles.slider}>
         {educationElement.map((element, index) => (
