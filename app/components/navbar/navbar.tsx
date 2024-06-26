@@ -16,6 +16,7 @@ interface NavbarProps {
   handleEducationRef: () => void;
   handleCertificationsRef: () => void;
   handleProjectsRef: () => void;
+  handleLanguageRef: () => void;
 }
 
 export default function Navbar({
@@ -30,6 +31,7 @@ export default function Navbar({
   handleEducationRef,
   handleCertificationsRef,
   handleProjectsRef,
+  handleLanguageRef,
 }: NavbarProps) {
   return (
     <nav className={styles.navbar}>
@@ -99,6 +101,7 @@ export default function Navbar({
             handleEducationRef={handleEducationRef}
             handleCertificationsRef={handleCertificationsRef}
             handleProjectsRef={handleProjectsRef}
+            handleLanguageRef={handleLanguageRef}
           />
         </div>
       </div>

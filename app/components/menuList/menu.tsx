@@ -13,6 +13,7 @@ interface MenuListProps {
   handleEducationRef: () => void;
   handleCertificationsRef: () => void;
   handleProjectsRef: () => void;
+  handleLanguageRef: () => void;
 }
 
 export default function MenuList({
@@ -25,6 +26,7 @@ export default function MenuList({
   handleEducationRef,
   handleCertificationsRef,
   handleProjectsRef,
+  handleLanguageRef,
 }: MenuListProps) {
   return (
     <section className={styles.menuListContainer}>
@@ -84,8 +86,8 @@ export default function MenuList({
           <li onClick={handleProjectsRef}>
             <p>Projects</p>
           </li>
-          <li>
-            <p>Languages</p>
+          <li onClick={handleLanguageRef}>
+            <p>Language</p>
           </li>
         </ul>
         <ul className={styles.sosialNetwork}>

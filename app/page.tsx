@@ -1,6 +1,6 @@
 "use client";
-import { useRef, useState } from "react";
 import "./globals.css";
+import { useRef, useState } from "react";
 import Navbar from "./components/navbar/navbar";
 import Header from "./components/header/header";
 import Skills from "./components/skills/skills";
@@ -9,6 +9,8 @@ import WorkHistory from "./components/workHistory/workHistory";
 import Education from "./components/education/education";
 import Certifications from "./components/certifications/certifications";
 import Projects from "./components/projects/projects";
+import Language from "./components/language/language";
+import Footer from "./components/footer/footer";
 
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -21,6 +23,7 @@ export default function Home() {
   const educationRef = useRef<HTMLDivElement>(null);
   const certificationsRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
+  const languageRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
@@ -68,6 +71,12 @@ export default function Home() {
     setChangeColor(true);
     setWhiteText(false);
   };
+  const handleLanguageRef = () => {
+    languageRef.current?.scrollIntoView({ behavior: "smooth" });
+    toggleMenu();
+    setChangeColor(true);
+    setWhiteText(false);
+  };
 
   return (
     <div className="fullpage-container">
@@ -81,6 +90,7 @@ export default function Home() {
         handleEducationRef={handleEducationRef}
         handleCertificationsRef={handleCertificationsRef}
         handleProjectsRef={handleProjectsRef}
+        handleLanguageRef={handleLanguageRef}
         changeColor={changeColor}
         whiteText={whiteText}
       />
@@ -104,6 +114,12 @@ export default function Home() {
       </div>
       <div ref={projectsRef} className="section">
         <Projects />
+      </div>
+      <div ref={languageRef} className="section">
+        <Language />
+      </div>
+      <div className="section">
+        <Footer />
       </div>
     </div>
   );

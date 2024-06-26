@@ -13,6 +13,7 @@
     "@fullpage/react-fullpage": "^0.1.42",
     "@types/next": "^9.0.0",
     "framer-motion": "^11.2.11",
+    "gsap": "^3.12.5",
     "next": "14.2.3",
     "next-router-mock": "^0.9.13",
     "react": "^18",

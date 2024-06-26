@@ -97,8 +97,7 @@
         .aboutWork {
           width: 600px;
           background-color: black;
-          border-radius: 5px;
-          border: 1px solid rgb(166, 166, 166);
+          border-radius: 20px;
           padding: 20px;
           display: flex;
           flex-direction: column;
@@ -140,7 +139,6 @@
           position: absolute;
           bottom: -50px;
           right: 50px;
-          border: 1px solid rgb(166, 166, 166);
           border-radius: 100%;
           width: 100px;
           height: 100px;
@@ -148,6 +146,7 @@
             width: 100px;
             height: 100px;
             border-radius: 100%;
+            border: 1px solid rgb(0, 0, 0);
           }
         }
       }

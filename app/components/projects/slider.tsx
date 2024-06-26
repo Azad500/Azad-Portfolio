@@ -138,11 +138,11 @@ export default function Slider() {
       {/* --------------first-slider----------- */}
       <div className={styles.sliderContainer}>
         <div className={styles.firstSliderContainer}>
-          {Array.from({ length: 30 }, (_, index) => (
-            <div className={styles.firstSliderElement} key={index}>
-              {repeatedData.map((element, elementIndex) => (
-                <a target="_blank" href={element.link}>
-                  <div className={styles.slider} key={elementIndex}>
+          {Array.from({ length: 30 }, (_, index1) => (
+            <div className={styles.firstSliderElement} key={index1}>
+              {repeatedData.map((element, elementIndex1) => (
+                <a target="_blank" href={element.link} key={elementIndex1}>
+                  <div className={styles.slider}>
                     <Image
                       className={styles.image}
                       src={element.image}
@@ -159,11 +159,11 @@ export default function Slider() {
         </div>
         {/* --------------second-slider----------- */}
         <div className={styles.secondSliderContainer}>
-          {Array.from({ length: 30 }, (_, index) => (
-            <div className={styles.secondSliderElement} key={index}>
-              {repeatedData.map((element, elementIndex) => (
-                <a target="_blank" href={element.link}>
-                  <div className={styles.slider} key={elementIndex}>
+          {Array.from({ length: 30 }, (_, index2) => (
+            <div className={styles.secondSliderElement} key={index2}>
+              {repeatedData.map((element, elementIndex2) => (
+                <a target="_blank" href={element.link} key={elementIndex2}>
+                  <div className={styles.slider}>
                     <Image
                       className={styles.image}
                       src={element.image}
@@ -180,11 +180,11 @@ export default function Slider() {
         </div>
         {/* --------------third-slider----------- */}
         <div className={styles.firstSliderContainer}>
-          {Array.from({ length: 30 }, (_, index) => (
-            <div className={styles.firstSliderElement} key={index}>
-              {reverseData.map((element, elementIndex) => (
-                <a target="_blank" href={element.link}>
-                  <div className={styles.slider} key={elementIndex}>
+          {Array.from({ length: 30 }, (_, index3) => (
+            <div className={styles.firstSliderElement} key={index3}>
+              {reverseData.map((element, elementIndex3) => (
+                <a target="_blank" href={element.link} key={elementIndex3}>
+                  <div className={styles.slider}>
                     <Image
                       className={styles.image}
                       src={element.image}
