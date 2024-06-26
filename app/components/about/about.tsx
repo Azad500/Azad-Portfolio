@@ -2,6 +2,7 @@
 import styles from "./about.module.scss";
 import AboutMeImage from "../../../assets/images/about.png";
 import BlackLogo from "../../../assets/images/blackLogo.png";
+import Circle from "../../../assets/images/yellowCircle.png";
 import Image from "next/image";
 
 export default function About() {
@@ -31,17 +32,25 @@ export default function About() {
             priority
           />
         </div>
+        <div className={styles.circle}>
+          <Image
+            className={styles.circleImage}
+            src={Circle}
+            alt="Circle"
+            width={700}
+            height={700}
+            priority
+          />
+        </div>
         <div className={styles.justImage}>
-          <div>
-            <Image
-              className={styles.image}
-              src={AboutMeImage}
-              alt="About Me"
-              width={400}
-              height={400}
-              priority
-            />
-          </div>
+          <Image
+            className={styles.image}
+            src={AboutMeImage}
+            alt="About Me"
+            width={400}
+            height={400}
+            priority
+          />
         </div>
       </div>
     </section>

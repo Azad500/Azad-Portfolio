@@ -105,11 +105,12 @@ export default function Home() {
       </div>
       <div ref={workHistoryRef} className="section">
         <WorkHistory />
+        {/* imageproblem */}
       </div>
       <div ref={educationRef} className="section">
         <Education />
       </div>
-      <div ref={certificationsRef} className="section">
+      {/* <div ref={certificationsRef} className="section">
         <Certifications />
       </div>
       <div ref={projectsRef} className="section">
@@ -120,7 +121,7 @@ export default function Home() {
       </div>
       <div className="section">
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 }

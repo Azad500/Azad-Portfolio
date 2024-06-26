@@ -137,8 +137,8 @@ export default function WorkHistory() {
                   className={styles.workImage}
                   src={element.companyImage}
                   alt={element.company}
-                  width={400}
-                  height={400}
+                  width={500}
+                  height={500}
                   priority
                 />
               </div>

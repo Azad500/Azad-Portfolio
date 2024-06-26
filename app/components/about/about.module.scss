@@ -1,3 +1,4 @@
+@import "../../responsive/responsive.scss";
 .aboutContainer {
   width: 100%;
   height: 100vh;
@@ -12,17 +13,26 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    @include responsive1024 {
+      height: 90vh;
+    }
     div:first-child {
       width: 40%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 10px;
+      @include responsive1024 {
+        width: 95%;
+      }
       h2 {
         font-size: 50px;
         font-weight: bold;
         font-family: "Poppins";
         color: black;
+        @include responsive1024 {
+          font-size: 30px;
+        }
       }
       p {
         font-size: 16px;
@@ -30,6 +40,9 @@
         font-family: "Poppins";
         text-align: justify;
         color: black;
+        @include responsive1024 {
+          font-size: 14px;
+        }
       }
     }
     .logoElement {
@@ -38,32 +51,77 @@
       position: absolute;
       left: 10%;
       bottom: 5%;
+      @include responsive768 {
+        display: none;
+      }
+      @include responsive768to1440 {
+        display: block;
+        left: 1%;
+      }
       .logo {
         width: 300px;
         height: 300px;
         rotate: -30deg;
+        @include responsive768to1440 {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+    .circle {
+      position: absolute;
+      bottom: -15%;
+      right: -15%;
+      .circleImage {
+        width: 900px;
+        height: 820px;
+        @include responsive768 {
+          width: 350px;
+          height: 400px;
+        }
+        @include responsive768to1440 {
+          width: 600px;
+          height: 600px;
+        }
       }
     }
     .justImage {
-      width: 60%;
-      height: 85vh;
-      background-color: #facb1c;
-      border-radius: 100%;
       position: absolute;
-      bottom: -10%;
-      right: -12%;
-      z-index: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 100;
       display: flex;
       justify-content: flex-end;
-      div {
-        width: 60%;
+      @include responsive768 {
+        width: 200px;
+        align-items: flex-end;
+      }
+      @include responsive768to1440 {
+        width: 400px;
+        align-items: flex-end;
+      }
+      @include responsive1440 {
+        position: unset;
+      }
+      .image {
+        width: 50%;
+        height: 700px;
+        object-fit: cover;
         position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%);
-        .image {
+        bottom: -5%;
+        right: 0;
+        z-index: 100;
+        @include responsive768 {
           width: 100%;
-          height: 700px;
+          height: 320px;
+        }
+        @include responsive768to1440 {
+          width: 100%;
+          height: 450px;
+          right: -15%;
+        }
+        @include responsive1440 {
+          right: -10%;
         }
       }
     }
