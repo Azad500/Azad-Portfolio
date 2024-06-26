@@ -1,4 +1,4 @@
-import PureCardFlip from "../cardFlip/PureCardFlip";
+import PureCardFlip from "../../../app/components/cardFlip/PureCardFlip";
 import styles from "./certifications.module.scss";
 export default function Certifications() {
   return (
