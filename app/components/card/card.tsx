@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./pureCardFlip.module.scss";
+import styles from "./card.module.scss";
 import AdasDiploma from "../../../assets/certifications/AdasDiploma.png";
 import DusunceAcademy from "../../../assets/certifications/DusunceAcademy.png";
 import AlasDiploma from "../../../assets/certifications/AlasDiploma.png";
@@ -67,7 +67,7 @@ const cardElements = [
   },
 ];
 
-export default function PureCardFlip() {
+export default function Card() {
   return (
     <section className={styles.cardContainer}>
       {cardElements.map((cardElement, index) => (
