@@ -95,10 +95,9 @@ export default function Language() {
         <h2>LANGUAGE</h2>
       </div>
       <ul className={styles.languages}>
-        {languages.map((language) => (
-          <>
+        {languages.map((language, index) => (
+          <div key={index}>
             <li
-              key={language.id}
               className={selectedLangId === language.id ? styles.language : ""}
               onClick={() => handleChooseLang(language.id)}
             >
@@ -111,7 +110,7 @@ export default function Language() {
                 priority
               />
             </li>
-          </>
+          </div>
         ))}
       </ul>
     </section>

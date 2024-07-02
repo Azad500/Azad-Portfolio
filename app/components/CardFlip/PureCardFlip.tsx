@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./PureCardFlip.module.scss";
+import styles from "./pureCardFlip.module.scss";
 import AdasDiploma from "../../../assets/certifications/AdasDiploma.png";
 import DusunceAcademy from "../../../assets/certifications/DusunceAcademy.png";
 import AlasDiploma from "../../../assets/certifications/AlasDiploma.png";

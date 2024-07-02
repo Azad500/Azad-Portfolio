@@ -1,3 +1,4 @@
+@import "../../responsive/responsive.scss";
 .educationContainer {
   width: 100%;
   height: 100vh;
@@ -15,16 +16,28 @@
     justify-content: flex-start;
     gap: 50px;
     padding-left: 40px;
+    @include responsive768 {
+      height: 90vh;
+      gap: 10px;
+      padding-left: 20px;
+    }
     h2 {
       font-family: "Poppins";
       font-weight: bold;
       font-size: 80px;
+      @include responsive768 {
+        font-size: 40px;
+      }
     }
     p {
       width: 350px;
       font-family: "Poppins";
       font-size: 16px;
       text-align: justify;
+      @include responsive768 {
+        width: 95%;
+        font-size: 14px;
+      }
     }
   }
   // -----------slider--------
@@ -41,25 +54,61 @@
     &::-webkit-scrollbar {
       display: none;
     }
+    @include responsive768 {
+      padding: 0;
+      align-items: center;
+      height: 76vh;
+      gap: 50px;
+    }
     .sliderTransparent {
       width: 700px;
       padding: 400px 0;
       position: relative;
       background-color: transparent;
+      @include responsive768 {
+        width: 300px;
+        height: 300px;
+      }
     }
     .sliderElement {
       width: 700px;
       height: 400px;
       position: relative;
+      @include responsive768 {
+        width: 300px;
+        height: 300px;
+      }
       .educationImageElement {
         width: 750px;
         height: 450px;
         border-radius: 30px;
+        position: relative;
+        @include responsive768 {
+          width: 300px;
+          height: 300px;
+        }
+        .overlayImage {
+          display: none;
+          @include responsive768 {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.512);
+            z-index: 5;
+            border-radius: 30px;
+          }
+        }
         .educationImage {
-          width: 750px;
+          width: 100%;
           height: 450px;
           object-fit: cover;
           border-radius: 30px;
+          @include responsive768 {
+            height: 300px;
+          }
         }
       }
       .halfCircle {
@@ -68,8 +117,11 @@
         width: 450px;
         height: 450px;
         border-radius: 30px;
+        @include responsive768 {
+          display: none;
+        }
         .educationCart {
-          width: 450px;
+          width: 100%;
           height: 450px;
           border-radius: 30px;
         }
@@ -86,11 +138,23 @@
         font-family: "Poppins";
         padding: 15px;
         font-size: 14px;
+        h2 {
+          font-size: 24px;
+          @include responsive768 {
+            font-size: 18px;
+          }
+        }
+        @include responsive768 {
+          z-index: 6;
+        }
         span {
           color: #facb1c;
         }
         p {
           width: 320px;
+          @include responsive768 {
+            width: 280px;
+          }
         }
         a {
           text-decoration: none;

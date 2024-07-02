@@ -133,6 +133,7 @@ export default function Education() {
         {educationElement.map((element, index) => (
           <div className={styles.sliderElement} key={index}>
             <div className={styles.educationImageElement}>
+              <div className={styles.overlayImage}></div>
               <Image
                 className={styles.educationImage}
                 src={element.educationImage}
