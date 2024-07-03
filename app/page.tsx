@@ -114,10 +114,10 @@ export default function Home() {
       <div ref={certificationsRef} className="section">
         <Certifications />
       </div>
-      {/* <div ref={projectsRef} className="section">
+      <div ref={projectsRef} className="section">
         <Projects />
       </div>
-      <div ref={languageRef} className="section">
+      {/* <div ref={languageRef} className="section">
         <Language />
       </div>
       <div className="section">

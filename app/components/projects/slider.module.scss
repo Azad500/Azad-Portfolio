@@ -1,9 +1,12 @@
-//   ----------first-slider-----------
+@import "../../responsive/responsive.scss";
 .sliderContainer {
   width: 55%;
   height: 100vh;
   display: flex;
   justify-content: flex-start;
+  @include responsive768 {
+    display: none;
+  }
   .firstSliderContainer {
     width: 250px;
     display: flex;
@@ -31,6 +34,9 @@
           display: flex;
           align-items: center;
           margin-bottom: 30px;
+          @include responsive768to1024 {
+            width: 150px;
+          }
           .image {
             width: 200px;
             height: 150px;
@@ -38,6 +44,10 @@
             object-fit: cover;
             transition: all 0.5s ease;
             cursor: pointer;
+            @include responsive768to1024 {
+              width: 150px;
+              height: 100px;
+            }
             &:hover {
               transform: scale(1.1);
             }
@@ -53,6 +63,9 @@
     flex-direction: column;
     box-sizing: border-box;
     padding-left: 25px;
+    @include responsive768to1024 {
+      width: 350px;
+    }
     .secondSliderElement {
       display: flex;
       flex-direction: column;
@@ -71,6 +84,9 @@
         display: flex;
         align-items: center;
         margin-bottom: 30px;
+        @include responsive768to1024 {
+          width: 150px;
+        }
         .image {
           width: 200px;
           height: 150px;
@@ -78,11 +94,21 @@
           object-fit: cover;
           transition: all 0.5s ease;
           cursor: pointer;
+          @include responsive768to1024 {
+            width: 150px;
+            height: 100px;
+          }
           &:hover {
             transform: scale(1.1);
           }
         }
       }
+    }
+  }
+  // -------------third-slider-----------
+  .thirdSliderContainer {
+    @include responsive768to1440 {
+      display: none;
     }
   }
 }

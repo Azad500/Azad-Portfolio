@@ -1,5 +1,15 @@
+@mixin responsive400 {
+  @media screen and (max-width: 400px) {
+    @content;
+  }
+}
+@mixin responsive600 {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
 @mixin responsive768 {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     @content;
   }
 }
@@ -30,6 +40,11 @@
 }
 @mixin responsive1300 {
   @media screen and (max-width: 1300px) {
+    @content;
+  }
+}
+@mixin responsive1400 {
+  @media screen and (max-width: 1400px) {
     @content;
   }
 }

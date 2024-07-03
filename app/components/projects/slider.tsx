@@ -179,7 +179,9 @@ export default function Slider() {
           ))}
         </div>
         {/* --------------third-slider----------- */}
-        <div className={styles.firstSliderContainer}>
+        <div
+          className={`${styles.firstSliderContainer} ${styles.thirdSliderContainer}`}
+        >
           {Array.from({ length: 30 }, (_, index3) => (
             <div className={styles.firstSliderElement} key={index3}>
               {reverseData.map((element, elementIndex3) => (
