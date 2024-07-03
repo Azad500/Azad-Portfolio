@@ -38,3 +38,8 @@
     @content;
   }
 }
+@mixin responsive1460 {
+  @media screen and (max-width: 1460px) {
+    @content;
+  }
+}

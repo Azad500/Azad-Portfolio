@@ -1,3 +1,4 @@
+@import "../../responsive/responsive.scss";
 .cardContainer {
   margin: 0 auto;
   max-width: 1500px;
@@ -7,6 +8,14 @@
   flex-wrap: wrap;
   gap: 40px;
   padding-left: 50px;
+  z-index: 100;
+  @include responsive1460 {
+    padding-left: 0px;
+    overflow-y: scroll;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
   .card {
     width: 250px;
     height: 300px;
@@ -106,6 +115,11 @@
             background-color: #ffd727;
           }
         }
+      }
+    }
+    &:last-child {
+      @include responsive1460 {
+        margin-bottom: 100px;
       }
     }
   }
