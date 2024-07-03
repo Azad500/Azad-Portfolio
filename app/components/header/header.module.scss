@@ -34,6 +34,7 @@
     font-weight: bold;
     @include responsive768 {
       font-size: 24px;
+      bottom: 15%;
     }
     h2:first-child {
       animation: slideRight 2s ease-in-out;
@@ -64,6 +65,9 @@
     width: 100%;
     bottom: 7%;
     z-index: 1;
+    @include responsive768 {
+      bottom: 13%;
+    }
     p {
       width: 95%;
       height: 10px;
