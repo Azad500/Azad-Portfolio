@@ -11,6 +11,7 @@ import Certifications from "./components/certifications/certifications";
 import Projects from "./components/projects/projects";
 import Language from "./components/language/language";
 import Footer from "./components/footer/footer";
+import Cards from "./components/education/cards";
 
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -110,7 +111,7 @@ export default function Home() {
       <div ref={educationRef} className="section">
         <Education />
       </div>
-      <div ref={certificationsRef} className="section">
+      {/* <div ref={certificationsRef} className="section">
         <Certifications />
       </div>
       <div ref={projectsRef} className="section">
@@ -121,7 +122,7 @@ export default function Home() {
       </div>
       <div className="section">
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 }

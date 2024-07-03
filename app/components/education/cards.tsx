@@ -1,24 +1,17 @@
-import styles from "./education.module.scss";
-import EducationKart from "../../../assets/images/educationCart.png";
+import styles from "./cards.module.scss";
 import School from "../../../assets/workHistory/School257.png";
 import Bachelor from "../../../assets/workHistory/UnecBachelor.png";
 import Master from "../../../assets/workHistory/UnecMaster.png";
 import AzFin from "../../../assets/workHistory/Azfin.png";
 import ElcPro from "../../../assets/workHistory/ElcPro.png";
-import MobilElcPro from "../../../assets/workHistory/MobilElcPro.png";
 import HonoursAcademy from "../../../assets/workHistory/honoursAcademy.jpeg";
 import AlasAcademy from "../../../assets/workHistory/Alas.png";
-import MobileAlasAcademy from "../../../assets/workHistory/AlasAcademy.png";
 import DusunceAcademy from "../../../assets/workHistory/DusunceAcademy.png";
-import MobileDusunceAcademy from "../../../assets/workHistory/MobileDusunceAcademy.png";
 import AdasAcademy from "../../../assets/workHistory/AdasAcademy.png";
-import MobileAdasAcademy from "../../../assets/workHistory/MobileAdasAcademy.png";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 const educationElement = [
   {
-    id: 1,
     courseName: "Adas Academy",
     educationName: "Full Stack Development",
     about:
@@ -27,11 +20,9 @@ const educationElement = [
     siteName: "Adas.az",
     siteLink: "https://adas.az/",
     educationImage: AdasAcademy,
-    mobileEducationImage: MobileAdasAcademy,
     educationImageAlt: "Adas Academy",
   },
   {
-    id: 2,
     courseName: "Dusunce Academy",
     educationName: "Trading",
     about:
@@ -40,11 +31,9 @@ const educationElement = [
     siteName: "Dusunce Academy",
     siteLink: "https://www.instagram.com/dusunce_academy/",
     educationImage: DusunceAcademy,
-    mobileEducationImage: MobileDusunceAcademy,
     educationImageAlt: "Dusunce Academy",
   },
   {
-    id: 3,
     courseName: "Alas Academy",
     educationName: "Front-end Development",
     about:
@@ -53,11 +42,9 @@ const educationElement = [
     siteName: "Alas.edu.az",
     siteLink: "https://alas.edu.az/",
     educationImage: AlasAcademy,
-    mobileEducationImage: MobileAlasAcademy,
     educationImageAlt: "Alas Academy",
   },
   {
-    id: 4,
     courseName: "Honours Academy",
     educationName: "F3",
     about: "I studied international accounting knowledge (ACCA) in 3 months.",
@@ -65,11 +52,9 @@ const educationElement = [
     siteName: "Honours.academy",
     siteLink: "https://honours.academy/",
     educationImage: HonoursAcademy,
-    mobileEducationImage: HonoursAcademy,
     educationImageAlt: "Honours Academy",
   },
   {
-    id: 5,
     courseName: "Elc Pro",
     educationName: "English",
     about:
@@ -78,11 +63,9 @@ const educationElement = [
     siteName: "ElcPro.az",
     siteLink: "https://elcpro.az/",
     educationImage: ElcPro,
-    mobileEducationImage: MobilElcPro,
     educationImageAlt: "ElcPro",
   },
   {
-    id: 6,
     courseName: "AzFin Academy",
     educationName: "Accounting",
     about:
@@ -91,11 +74,9 @@ const educationElement = [
     siteName: "AzFin Academy",
     siteLink: "https://www.facebook.com/AzFinAcademy/",
     educationImage: AzFin,
-    mobileEducationImage: AzFin,
     educationImageAlt: "AzFin",
   },
   {
-    id: 7,
     courseName: "Azerbaijan State Economic University",
     educationName: "Master Degree",
     about:
@@ -104,11 +85,9 @@ const educationElement = [
     siteName: "Unec.edu.az",
     siteLink: "https://unec.edu.az/",
     educationImage: Master,
-    mobileEducationImage: Master,
     educationImageAlt: "Master",
   },
   {
-    id: 8,
     courseName: "Azerbaijan State Economic University",
     educationName: "Bachelor Degree",
     about:
@@ -117,11 +96,9 @@ const educationElement = [
     siteName: "Unec.edu.az",
     siteLink: "https://unec.edu.az/",
     educationImage: Bachelor,
-    mobileEducationImage: Bachelor,
     educationImageAlt: "Bachelor",
   },
   {
-    id: 9,
     courseName: "Full Secondary School No. 257",
     educationName: "Secondary Education",
     about:
@@ -130,110 +107,69 @@ const educationElement = [
     siteName: "Bakimektebleri.edu.az",
     siteLink: "https://bakimektebleri.edu.az/257/",
     educationImage: School,
-    mobileEducationImage: School,
     educationImageAlt: "School",
   },
 ];
-const educationPart = [
-  {
-    header: "EDUCATION",
-    educationText:
-      "After completing 11 years of secondary education, 6 years of university (4 years of bachelor's and 2 years of master's), I started to receive the necessary training for my working life and I am still continuing.",
-  },
-];
 
-export default function Education() {
-  const [expandedCard, setExpandedCard] = useState<number | null>(null);
-  const [mobileSize, setMobileSize] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setMobileSize(window.innerWidth < 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const handleCardClick = (id: number) => {
-    setExpandedCard(expandedCard === id ? null : id);
-  };
-
-  const elements = educationPart.find((element) => element.header);
+export default function Cards() {
   return (
-    <section className={styles.educationContainer}>
-      {elements && (
-        <div className={styles.leftSide}>
-          <h2>{elements.header}</h2>
-          <p>{elements.educationText}</p>
-        </div>
-      )}
-      {/* -----------slider------------- */}
-      <div className={styles.slider}>
-        {educationElement.map((element, index) => (
-          <div className={styles.sliderElement} key={index}>
-            <div className={styles.educationImageElement}>
-              {expandedCard !== element.id && (
+    <div className={styles.wrapper}>
+      {educationElement.map((element, index) => (
+        <div className={styles.cardCountry} key={index}>
+          <input
+            type="checkbox"
+            id={`card-${index}`}
+            className={styles.more1}
+            aria-hidden="true"
+          />
+          <div className={styles.content1}>
+            <div className={styles.overlay}>
+              <div className={styles.inner}>
+                <h3 className={styles.text1}>{element.courseName}</h3>
+                <p className={styles.text2}>{element.educationName}</p>
                 <Image
-                  className={styles.mobilEducationImage}
-                  src={
-                    mobileSize
-                      ? element.mobileEducationImage
-                      : element.educationImage
-                  }
+                  className={styles.imageFront}
+                  src={element.educationImage}
                   alt={element.educationImageAlt}
                   width={400}
                   height={400}
                   priority
                 />
-              )}
-              <button
-                className={styles.detail}
-                onClick={() => handleCardClick(element.id)}
-              >
-                {expandedCard === element.id ? "Close" : "In Detail"}
-              </button>
-            </div>
-            <div className={styles.halfCircle}>
-              <Image
-                className={styles.educationCart}
-                src={EducationKart}
-                alt="Education Kart"
-                width={400}
-                height={400}
-                priority
-              />
-            </div>
-            {expandedCard === element.id && (
-              <div className={styles.mobilEducationText}>
-                <p>{element.about}</p>
-                <span>Baku, Azerbaijan</span>
-                <span>{element.educationDate}</span>
-                <a target="_blank" href={element.siteLink}>
-                  {element.siteName}
-                </a>
+                <label
+                  htmlFor={`card-${index}`}
+                  className={`${styles.button} ${styles.cardButton}`}
+                  aria-hidden="true"
+                >
+                  In Detail
+                </label>
               </div>
-            )}
-            {expandedCard !== element.id && (
-              <div className={styles.webEducationText}>
-                <h2>{element.educationName}</h2>
-                <span>{element.courseName}</span>
-                <p>{element.about}</p>
-                <span>Baku, Azerbaijan</span>
-                <span>{element.educationDate}</span>
-                <a target="_blank" href={element.siteLink}>
-                  {element.siteName}
-                </a>
+            </div>
+            <div className={styles.backInfo}>
+              <div className={styles.inner}>
+                <div className={styles.onlyTextInBack}>
+                  <a
+                    href={element.siteLink}
+                    className={styles.azerbaijanOffice}
+                  >
+                    Site - {element.siteName}
+                  </a>
+                  <p className={styles.azerbaijanAddress}>
+                    {element.educationDate}
+                  </p>
+                  <p>{element.about}</p>
+                </div>
+                <label
+                  htmlFor={`card-${index}`}
+                  className={`${styles.button} ${styles.return}`}
+                  aria-hidden="true"
+                >
+                  Back
+                </label>
               </div>
-            )}
+            </div>
           </div>
-        ))}
-        <div className={styles.sliderTransparent}></div>
-      </div>
-    </section>
+        </div>
+      ))}
+    </div>
   );
 }

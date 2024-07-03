@@ -75,8 +75,10 @@
       height: 400px;
       position: relative;
       @include responsive768 {
-        width: 300px;
-        height: 300px;
+        width: 302px;
+        height: 252px;
+        border: 1px solid black;
+        border-radius: 30px;
       }
       .educationImageElement {
         width: 750px;
@@ -85,29 +87,36 @@
         position: relative;
         @include responsive768 {
           width: 300px;
-          height: 300px;
+          height: 250px;
+          background-color: black;
         }
-        .overlayImage {
-          display: none;
-          @include responsive768 {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.512);
-            z-index: 5;
-            border-radius: 30px;
-          }
-        }
-        .educationImage {
+        .mobilEducationImage {
           width: 100%;
           height: 450px;
           object-fit: cover;
           border-radius: 30px;
           @include responsive768 {
-            height: 300px;
+            height: 250px;
+          }
+        }
+        .detail {
+          display: none;
+          @include responsive768 {
+            display: block;
+            position: absolute;
+            bottom: 5%;
+            right: -20px;
+            transform: translateX(-50%);
+            z-index: 100;
+            width: 100px;
+            height: 35px;
+            border-radius: 10px;
+            border: none;
+            background-color: #facb1c;
+            font-family: "Poppins";
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.236);
           }
         }
       }
@@ -126,7 +135,8 @@
           border-radius: 30px;
         }
       }
-      .educationText {
+      .webEducationText,
+      .mobilEducationText {
         position: absolute;
         bottom: 0;
         color: white;
@@ -143,9 +153,6 @@
           @include responsive768 {
             font-size: 18px;
           }
-        }
-        @include responsive768 {
-          z-index: 6;
         }
         span {
           color: #facb1c;
@@ -166,12 +173,24 @@
           }
         }
       }
+      .mobilEducationText {
+        top: 0;
+        bottom: unset;
+      }
+      .webEducationText {
+        @include responsive768 {
+          display: none;
+        }
+      }
     }
     .sliderElement:first-of-type {
       position: sticky;
       top: 20%;
       z-index: 1;
       margin-bottom: 170px;
+      @include responsive768 {
+        margin-bottom: 120px;
+      }
     }
     .sliderElement:nth-of-type(2) {
       position: sticky;
