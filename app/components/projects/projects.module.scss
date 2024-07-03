@@ -107,34 +107,43 @@
       width: 95%;
       padding-left: 10px;
     }
+    .projectsHeaderText {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      h2 {
+        font-family: "Poppins";
+        color: black;
+        font-size: 45px;
+        font-weight: bold;
+        @include responsive768 {
+          font-size: 24px;
+        }
+      }
+      p {
+        font-family: "Poppins";
+        color: black;
+        font-size: 35px;
+        font-weight: bold;
+        border: 3px solid black;
+        border-radius: 100%;
+        padding: 5px 15px;
+        @include responsive600 {
+          font-size: 28px;
+          color: white;
+          border: 3px solid white;
+        }
+      }
+    }
     .portfolioContainer {
-      .projectsHeaderText {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        h2 {
-          font-family: "Poppins";
-          color: black;
-          font-size: 45px;
-          font-weight: bold;
-          @include responsive768 {
-            font-size: 24px;
-          }
-        }
-        p {
-          font-family: "Poppins";
-          color: black;
-          font-size: 35px;
-          font-weight: bold;
-          border: 3px solid black;
-          border-radius: 100%;
-          padding: 5px 15px;
-          @include responsive600 {
-            font-size: 28px;
-            color: white;
-            border: 3px solid white;
-          }
-        }
+      @include responsive768 {
+        max-width: 400px;
+        height: 400px;
+        overflow-y: scroll;
+        border-radius: 5px;
+        padding: 10px 0;
+        background-color: white;
+        margin-top: 10px;
       }
       .portfolioPart {
         width: 100%;
@@ -147,11 +156,18 @@
         margin-top: 10px;
         background-color: white;
         border-radius: 10px;
+        @include responsive768 {
+          background-color: transparent;
+          height: unset;
+        }
         li:first-child {
           display: flex;
           align-items: center;
           gap: 10px;
           cursor: default;
+          @include responsive768 {
+            display: none;
+          }
           &:hover {
             transform: scale(1);
           }
@@ -183,6 +199,11 @@
           gap: 10px;
           overflow-y: auto;
           padding: 5px 20px;
+          @include responsive768 {
+            overflow: unset;
+            padding: 0 10px;
+            gap: 15px;
+          }
           .imageContainer {
             display: flex;
             align-items: center;
@@ -197,10 +218,16 @@
               height: 42px;
               border-radius: 10px;
               border: 1px solid black;
+              @include responsive768 {
+                border-radius: 5px;
+              }
               .image {
                 width: 60px;
                 height: 40px;
                 border-radius: 10px;
+                @include responsive768 {
+                  border-radius: 5px;
+                }
               }
             }
             p {
@@ -215,19 +242,68 @@
       }
     }
   }
+  // -----------slider---------
+  .firstSliderContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    height: 220px;
+    overflow: hidden;
+    position: absolute;
+    @include responsiveMin768 {
+      display: none;
+    }
+    .firstSliderElement {
+      display: flex;
+      flex-direction: row;
+      animation: rightSliderShow 30s infinite linear;
+      position: relative;
+      @keyframes rightSliderShow {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      a {
+        text-decoration: none;
+        .slider {
+          width: 170px;
+          display: flex;
+          align-items: center;
+          .image {
+            width: 150px;
+            height: 100px;
+            border-radius: 20px;
+            object-fit: cover;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 .elements::-webkit-scrollbar,
-.popUpTexts::-webkit-scrollbar {
+.popUpTexts::-webkit-scrollbar,
+.portfolioContainer::-webkit-scrollbar {
   width: 12px;
 }
 .elements::-webkit-scrollbar-thumb,
-.popUpTexts::-webkit-scrollbar-thumb {
+.popUpTexts::-webkit-scrollbar-thumb,
+.portfolioContainer::-webkit-scrollbar-thumb {
   background-color: #000000;
   border-radius: 10px;
   border: 2px solid white;
   cursor: pointer;
 }
 .elements::-webkit-scrollbar-thumb:hover,
-.popUpTexts::-webkit-scrollbar-thumb:hover {
+.popUpTexts::-webkit-scrollbar-thumb:hover,
+.portfolioContainer::-webkit-scrollbar-thumb:hover {
   background-color: #565656;
 }

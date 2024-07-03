@@ -76,7 +76,7 @@ const freelanceElement: Project[] = [
     image: AzadPortfolio,
     alt: "AzadPortfolio",
     link: "...",
-    site: "AzadMirzazada.me",
+    site: "azadmirzazada.com",
     description: "Description for Azad Portfolio project.",
   },
 ];
@@ -166,6 +166,21 @@ const mstock: Project[] = [
     description: "Description for Menzil Tap project.",
   },
 ];
+const repeatedData = Array.from(
+  { length: 30 },
+  (_, index) => freelanceElement[index % freelanceElement.length]
+);
+// ----------------all-projects----------------
+const allProjects = [
+  ...freelanceElement,
+  ...webrandyStartuup,
+  ...alasElement,
+  ...mstock,
+];
+const allProjectsData = Array.from(
+  { length: 30 },
+  (_, index) => allProjects[index % allProjects.length]
+);
 
 export default function Projects() {
   const [openPopUp, setOpenPopUp] = useState(false);
@@ -214,11 +229,11 @@ export default function Projects() {
       )}
       {/* ------------------------------- */}
       <div className={styles.portfolioTexts}>
+        <div className={styles.projectsHeaderText}>
+          <h2>MY PROJECTS</h2>
+          <p>17</p>
+        </div>
         <div className={styles.portfolioContainer}>
-          <div className={styles.projectsHeaderText}>
-            <h2>MY PROJECTS</h2>
-            <p>17</p>
-          </div>
           {/* ---------------------- */}
           <ul className={styles.portfolioPart}>
             <li>
@@ -333,6 +348,28 @@ export default function Projects() {
           </ul>
         </div>
       </div>
+      {/* ----------------slider------------ */}
+      <div className={styles.firstSliderContainer}>
+        {Array.from({ length: 30 }, (_, index1) => (
+          <div className={styles.firstSliderElement} key={index1}>
+            {allProjectsData.map((element, elementIndex1) => (
+              <a target="_blank" href={element.link} key={elementIndex1}>
+                <div className={styles.slider}>
+                  <Image
+                    className={styles.image}
+                    src={element.image}
+                    alt={element.alt}
+                    width={400}
+                    height={400}
+                    priority
+                  />
+                </div>
+              </a>
+            ))}
+          </div>
+        ))}
+      </div>
+      {/* ---------------------------------- */}
       <Slider />
     </section>
   );
