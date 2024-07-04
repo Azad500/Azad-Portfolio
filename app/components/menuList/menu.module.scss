@@ -4,6 +4,7 @@
   height: 580px;
   background-color: black;
   border-radius: 15px;
+  z-index: 2000;
   @include responsive768 {
     width: 300px;
     height: 500px;
