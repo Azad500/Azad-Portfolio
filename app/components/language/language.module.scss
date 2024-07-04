@@ -1,3 +1,4 @@
+@import "../../responsive/responsive.scss";
 .languageContainer {
   width: 100%;
   height: 100vh;
@@ -35,6 +36,9 @@
         height: 100%;
         border-radius: 30px;
         object-fit: cover;
+        @include responsive768 {
+          height: 41vh;
+        }
       }
       span {
         text-align: center;
@@ -47,6 +51,15 @@
         color: white;
         font-family: "Poppins";
         font-weight: bold;
+        @include responsive768 {
+          top: 35%;
+          width: 100%;
+          font-size: 18px;
+        }
+        @include responsive768to1024 {
+          width: 80%;
+          font-size: 20px;
+        }
       }
     }
   }
@@ -62,6 +75,9 @@
       font-family: "Poppins";
       font-weight: bold;
       font-style: italic;
+      @include responsive768 {
+        font-size: 40px;
+      }
     }
   }
   .languages {
@@ -75,6 +91,10 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    @include responsive768 {
+      top: 65%;
+      flex-direction: column;
+    }
     .transparent {
       border: none;
     }
@@ -83,13 +103,24 @@
       height: 60px;
       border: 3px solid white;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       gap: 10px;
       border-radius: 30px;
       cursor: pointer;
       background-color: transparent;
       transition: all 0.3s ease;
+      @include responsive768 {
+        width: 160px;
+        height: 60px;
+        padding: 0 15px;
+      }
+      @include responsive768to1024 {
+        width: 160px;
+        height: 60px;
+        padding: 0;
+        justify-content: center;
+      }
       &:hover {
         background-color: white;
       }
@@ -101,6 +132,12 @@
         font-size: 20px;
         font-weight: bold;
         font-family: "Poppins";
+        @include responsive768 {
+          font-size: 14px;
+        }
+        @include responsive768to1024 {
+          font-size: 16px;
+        }
       }
     }
     .language {

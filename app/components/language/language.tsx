@@ -16,7 +16,7 @@ const languages = [
     langImage: Azerbaijan,
     langName: "Azerbaijani",
     langFlag: AzerbaijanImg,
-    about: "Azerbaijani is my native language.",
+    about: "Azerbaijani is my first language.",
   },
   {
     id: 2,
