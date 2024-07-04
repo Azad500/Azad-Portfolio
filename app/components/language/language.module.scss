@@ -103,26 +103,30 @@
       height: 60px;
       border: 3px solid white;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       gap: 10px;
       border-radius: 30px;
       cursor: pointer;
       background-color: transparent;
       transition: all 0.3s ease;
+      z-index: 1000;
       @include responsive768 {
         width: 160px;
         height: 60px;
         padding: 0 15px;
+        justify-content: space-between;
       }
       @include responsive768to1024 {
         width: 160px;
         height: 60px;
         padding: 0;
-        justify-content: center;
       }
       &:hover {
         background-color: white;
+        @include responsive768 {
+          background-color: unset;
+        }
       }
       &:hover p {
         color: black;
