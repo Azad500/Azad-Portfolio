@@ -11,7 +11,6 @@ import Certifications from "./components/certifications/certifications";
 import Projects from "./components/projects/projects";
 import Language from "./components/language/language";
 import Footer from "./components/footer/footer";
-import Cards from "./components/education/cards";
 
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -80,8 +79,34 @@ export default function Home() {
     setWhiteText(false);
   };
 
+  const handleScroll = (direction: "up" | "down") => {
+    const currentScroll = window.scrollY;
+    const viewportHeight = window.innerHeight;
+    if (direction === "up") {
+      window.scrollTo({
+        top: currentScroll - viewportHeight,
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollTo({
+        top: currentScroll + viewportHeight,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="fullpage-container">
+      <div className="scroll">
+        <div className="scroll-buttons">
+          <button className="up-arrow" onClick={() => handleScroll("up")}>
+            &#62;
+          </button>
+          <button className="down-arrow" onClick={() => handleScroll("down")}>
+            &#62;
+          </button>
+        </div>
+      </div>
       <Navbar
         toggleMenu={toggleMenu}
         openMenu={openMenu}

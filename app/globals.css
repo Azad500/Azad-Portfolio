@@ -10,16 +10,63 @@ body::-webkit-scrollbar {
 .fullpage-container {
   width: 100%;
   height: 100vh;
+  position: relative;
 }
-
+.scroll {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 100000;
+  overflow-y: hidden;
+}
+.scroll-buttons {
+  position: fixed;
+  bottom: 20%;
+  right: 5%;
+  z-index: 100001;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.scroll-buttons button {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid black;
+  background-color: #facb1c;
+  cursor: pointer;
+}
+.scroll-buttons .up-arrow {
+  rotate: 270deg;
+}
+.scroll-buttons .down-arrow {
+  rotate: 90deg;
+}
 .section {
   width: 100%;
   height: 100vh;
   scroll-snap-align: start;
 }
-
 html,
 body {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+}
+@media screen and (max-width: 1023px) {
+  html,
+  body {
+    scroll-snap-type: unset;
+    overflow-y: unset;
+  }
+  .section {
+    width: unset;
+    height: unset;
+    scroll-snap-align: unset;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .scroll {
+    display: none;
+  }
 }
