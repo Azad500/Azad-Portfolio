@@ -1,6 +1,6 @@
 "use client";
 import "./globals.css";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navbar from "./components/navbar/navbar";
 import Header from "./components/header/header";
 import Skills from "./components/skills/skills";
@@ -95,17 +95,30 @@ export default function Home() {
     }
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 1024) {
+        document.body.style.overflowY = "hidden";
+      } else {
+        document.body.style.overflowY = "auto";
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="fullpage-container">
-      <div className="scroll">
-        <div className="scroll-buttons">
-          <button className="up-arrow" onClick={() => handleScroll("up")}>
-            &#62;
-          </button>
-          <button className="down-arrow" onClick={() => handleScroll("down")}>
-            &#62;
-          </button>
-        </div>
+      <div className="scroll-buttons">
+        <button className="up-arrow" onClick={() => handleScroll("up")}>
+          &#62;
+        </button>
+        <button className="down-arrow" onClick={() => handleScroll("down")}>
+          &#62;
+        </button>
       </div>
       <Navbar
         toggleMenu={toggleMenu}
