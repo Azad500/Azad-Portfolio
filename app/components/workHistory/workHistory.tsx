@@ -14,7 +14,8 @@ const workHistoryElements = [
     id: 1,
     jobName: "FRONT-END DEVELOPER",
     company: "MSTOCK",
-    aboutWork: "I make websites remotely",
+    aboutWork:
+      "I work remotely at MStock. Since this company is new, it is still at the beginning. I develop websites for company promotion and since the company's server is old, I am required to write the websites only in HTML, CSS and JAVASCRIPT.",
     date: "January 2024 - Current",
     link: "https://mstock.az/",
     site: "MStock.az",
@@ -25,8 +26,8 @@ const workHistoryElements = [
     jobName: "FRONT-END DEVELOPER",
     company: "WEBRANDY",
     aboutWork:
-      "From October 2023, I started working as a Front-end developer at Webrandy Startup.",
-    date: "October 2023 - April 2024",
+      "I have been working as a front-end developer in this startup since 2023. In addition to creating the official website of the Webrandy startup, I have also created websites for real customers of the company. Here I have developed sites on React.",
+    date: "October 2023 - July 2024",
     link: "https://webrandy.com/",
     site: "Webrandy.com",
     companyImage: WEBRANDY,
@@ -36,8 +37,8 @@ const workHistoryElements = [
     jobName: "FRONT-END DEVELOPER",
     company: "ALAS Development Center",
     aboutWork:
-      "After completing 6 months of Front-end training at Alas Academy, I started working as a Front-end developer at Alas Development Center.",
-    date: "May 2023 - May 2024",
+      "After completing the 6-month course at Alas Academy, I started working as a front-end developer at Alas Development Center. I had 2 real projects.",
+    date: "January 2024 - April 2024",
     link: "https://alas.edu.az/",
     site: "Alas.edu.az",
     companyImage: ALASACADEMY,
@@ -58,7 +59,7 @@ const workHistoryElements = [
     jobName: "SENIOR ACCOUNTANT",
     company: "ARRIVER LLC",
     aboutWork:
-      "Customs of products imported to Azerbaijan through the Bank making payments, making reports of all payments, external making payments to 1C software of imported products monthly for uploading and reporting to the tax authority preparation of reports, products through e-invoice to customers selling, attracting customers to the company, making bank payments conducting and controlling it, paying employees' salaries, Implementation of tax operations, problems occurring during work action on the execution of operations, etc... In addition, the skills: Accounting policies and controls, financial statements, Settlements, Processing of documents, Financial Information Systems, Audit of taxpayers' accounts, Account Reconciliation Processes, Payables and receivables, Calculation of liabilities, Fixed costs, Effective and Professional Communication, Nonconformity Assessment, Critical thinking and analysis, Tax obligations, Accounting of documents, Cash analysis",
+      "Customs of products imported to Azerbaijan through the Bank making payments, making reports of all payments, external making payments to 1C software of imported products monthly for uploading and reporting to the tax authority preparation of reports, products through e-invoice to customers selling, attracting customers to the company, making bank payments conducting and controlling it, paying employees' salaries, Implementation of tax operations, problems occurring during work action on the execution of operations, etc... In addition, the skills: Accounting policies and controls, financial statements, Settlements, Processing of documents, Financial Information Systems, Audit of taxpayers' accounts, Account Reconciliation Processes, Payables and receivables, Calculation of liabilities, Fixed costs, Effective and Professional Communication, Nonconformity Assessment, Critical thinking and analysis, Tax obligations, Accounting of documents, Cash analysis.",
     date: "November 2019 - March 2023",
     link: "https://arriver.az/",
     site: "Arriver.az",

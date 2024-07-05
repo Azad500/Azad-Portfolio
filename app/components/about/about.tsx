@@ -12,14 +12,14 @@ export default function About() {
         <div>
           <h2>ABOUT ME</h2>
           <p>
-            I am Azad Mirzazadeh, I am a person with analytical thinking
-            ability, careful and precise, responsible and goal-oriented,
-            researcher and innovator, able to work under stress, able to work
-            with a team, management and organization and with various qualities.
-            After receiving training, I have been working as a Front-end
-            developer since 2023. Currently, I am improving my profession and
-            expanding my experience by working on projects. My portfolio site
-            will help you get to know me. Thank you very much.
+            I am Azad Mirzazada, I am a person with analytical thinking ability,
+            careful and precise, responsible and goal-oriented, researcher and
+            innovator, able to work under stress, able to work with a team,
+            management and organization and with various qualities. After
+            receiving training, I have been working as a Front-end developer
+            since 2023. Currently, I am improving my profession and expanding my
+            experience by working on projects. My portfolio site will help you
+            get to know me. Thank you very much.
           </p>
         </div>
         <div className={styles.logoElement}>
