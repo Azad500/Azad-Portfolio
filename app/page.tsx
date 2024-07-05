@@ -79,6 +79,82 @@ export default function Home() {
     setWhiteText(false);
   };
 
+  useEffect(() => {
+    const sections = [
+      {
+        ref: homeRef,
+        changeColor: true,
+        whiteText: true,
+      },
+      {
+        ref: aboutRef,
+        changeColor: false,
+        whiteText: true,
+      },
+      {
+        ref: skillsRef,
+        changeColor: true,
+        whiteText: true,
+      },
+      {
+        ref: workHistoryRef,
+        changeColor: false,
+        whiteText: false,
+      },
+      {
+        ref: educationRef,
+        changeColor: false,
+        whiteText: true,
+      },
+      {
+        ref: certificationsRef,
+        changeColor: true,
+        whiteText: false,
+      },
+      {
+        ref: projectsRef,
+        changeColor: true,
+        whiteText: false,
+      },
+      {
+        ref: languageRef,
+        changeColor: true,
+        whiteText: false,
+      },
+    ];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const section = sections.find(
+              (s) => s.ref.current === entry.target
+            );
+            if (section) {
+              setChangeColor(section.changeColor);
+              setWhiteText(section.whiteText);
+            }
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    sections.forEach((section) => {
+      if (section.ref.current) {
+        observer.observe(section.ref.current);
+      }
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        if (section.ref.current) {
+          observer.unobserve(section.ref.current);
+        }
+      });
+    };
+  }, []);
+
   return (
     <div className="fullpage-container">
       <Navbar
@@ -106,7 +182,6 @@ export default function Home() {
       </div>
       <div ref={workHistoryRef} className="section">
         <WorkHistory />
-        {/* imageproblem */}
       </div>
       <div ref={educationRef} className="section">
         <Education />
