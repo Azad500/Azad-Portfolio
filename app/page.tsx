@@ -79,47 +79,8 @@ export default function Home() {
     setWhiteText(false);
   };
 
-  const handleScroll = (direction: "up" | "down") => {
-    const currentScroll = window.scrollY;
-    const viewportHeight = window.innerHeight;
-    if (direction === "up") {
-      window.scrollTo({
-        top: currentScroll - viewportHeight,
-        behavior: "smooth",
-      });
-    } else {
-      window.scrollTo({
-        top: currentScroll + viewportHeight,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 1024) {
-        document.body.style.overflowY = "hidden";
-      } else {
-        document.body.style.overflowY = "auto";
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <div className="fullpage-container">
-      <div className="scroll-buttons">
-        <button className="up-arrow" onClick={() => handleScroll("up")}>
-          &#62;
-        </button>
-        <button className="down-arrow" onClick={() => handleScroll("down")}>
-          &#62;
-        </button>
-      </div>
       <Navbar
         toggleMenu={toggleMenu}
         openMenu={openMenu}

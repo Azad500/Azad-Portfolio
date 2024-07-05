@@ -6,53 +6,23 @@
 body::-webkit-scrollbar {
   display: none;
 }
-
 .fullpage-container {
   width: 100%;
   height: 100vh;
-  position: relative;
 }
-.scroll-buttons {
-  position: fixed;
-  bottom: 20%;
-  right: 5%;
-  z-index: 10000;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+html,
+body {
+  overflow-y: unset;
 }
-.scroll-buttons button {
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: bold;
-  border: 1px solid black;
-  background-color: #facb1c;
-  cursor: pointer;
-  color: black;
-}
-.scroll-buttons .up-arrow {
-  rotate: 270deg;
-}
-.scroll-buttons .down-arrow {
-  rotate: 90deg;
-}
-.section {
-  width: 100%;
-  height: 100vh;
-  scroll-snap-align: start;
-}
-
 @media screen and (min-width: 1024px) {
+  .section {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+  }
   html,
   body {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-  }
-  .scroll-buttons {
-    display: none;
-  }
-  .fullpage-container {
-    overflow: auto;
   }
 }
