@@ -21,10 +21,12 @@
       @include responsive768 {
         animation: typing 5s steps(500, end);
       }
-      h1 {
+      h1,
+      h2 {
         margin-right: 5px;
       }
       h1,
+      h2,
       span {
         font-size: 30px;
         font-family: "poppins";

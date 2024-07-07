@@ -44,9 +44,9 @@ export default function Navbar({
               Azad
             </h1>
           ) : (
-            <h1 className={changeColor ? styles.yellowPoint : styles.whiteText}>
+            <h2 className={changeColor ? styles.yellowPoint : styles.whiteText}>
               Azad
-            </h1>
+            </h2>
           )}
           <span className={changeColor ? styles.whiteText : styles.blackText}>
             Mirzazada

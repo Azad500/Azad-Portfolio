@@ -17,6 +17,7 @@ import PutaLogistik from "../../../assets/projects/PutaLogistik.png";
 import Mico from "../../../assets/projects/Mico.png";
 import MenzilTap from "../../../assets/projects/MenzilTap.png";
 import AzadPortfolio from "../../../assets/projects/AzadPortfolio.png";
+import IndiTap from "../../../assets/projects/IndiTap.png";
 
 const cardElements = [
   {
@@ -41,7 +42,7 @@ const cardElements = [
     id: 4,
     image: AlasEva,
     alt: "AlasEva",
-    link: "...",
+    link: "https://web.alasdevcenter.com/",
   },
   {
     id: 5,
@@ -119,6 +120,12 @@ const cardElements = [
     id: 17,
     image: AzadPortfolio,
     alt: "AzadPortfolio",
+    link: "https://www.azadmirzazada.com/",
+  },
+  {
+    id: 18,
+    image: IndiTap,
+    alt: "IndiTap",
     link: "...",
   },
 ];

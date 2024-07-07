@@ -191,6 +191,13 @@ export default function Education() {
                   priority
                 />
               )}
+              <div className={styles.overElement}>
+                <h3>{element.courseName}</h3>
+                <p className={styles.cartUpEducationName}>
+                  {element.educationName}
+                </p>
+              </div>
+              <div className={styles.overlay}></div>
               <button
                 className={styles.detail}
                 onClick={() => handleCardClick(element.id)}
