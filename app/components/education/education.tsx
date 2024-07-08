@@ -178,25 +178,28 @@ export default function Education() {
           <div className={styles.sliderElement} key={index}>
             <div className={styles.educationImageElement}>
               {expandedCard !== element.id && (
-                <Image
-                  className={styles.mobilEducationImage}
-                  src={
-                    mobileSize
-                      ? element.mobileEducationImage
-                      : element.educationImage
-                  }
-                  alt={element.educationImageAlt}
-                  width={400}
-                  height={400}
-                  priority
-                />
+                <>
+                  <Image
+                    className={styles.mobilEducationImage}
+                    src={
+                      mobileSize
+                        ? element.mobileEducationImage
+                        : element.educationImage
+                    }
+                    alt={element.educationImageAlt}
+                    width={400}
+                    height={400}
+                    priority
+                  />
+
+                  <div className={styles.overElement}>
+                    <h3>{element.courseName}</h3>
+                    <p className={styles.cartUpEducationName}>
+                      {element.educationName}
+                    </p>
+                  </div>
+                </>
               )}
-              <div className={styles.overElement}>
-                <h3>{element.courseName}</h3>
-                <p className={styles.cartUpEducationName}>
-                  {element.educationName}
-                </p>
-              </div>
               <div className={styles.overlay}></div>
               <button
                 className={styles.detail}

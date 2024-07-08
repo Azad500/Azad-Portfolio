@@ -182,6 +182,7 @@
         font-family: "Poppins";
         padding: 15px;
         font-size: 14px;
+        z-index: 1;
         h2 {
           font-size: 20px;
           @include responsive768 {
