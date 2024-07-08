@@ -296,7 +296,9 @@
             cursor: pointer;
             transition: all 0.3s ease;
             &:hover {
-              transform: scale(1.04);
+              @include responsiveMin768 {
+                transform: scale(1.04);
+              }
             }
             .imageElement {
               width: 62px;
