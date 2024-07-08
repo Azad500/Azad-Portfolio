@@ -17,7 +17,7 @@
     .firstSliderElement {
       display: flex;
       flex-direction: column;
-      animation: upSliderShow 20s infinite linear;
+      animation: upSliderShow 35s infinite linear;
       position: relative;
       @keyframes upSliderShow {
         0% {
@@ -69,7 +69,7 @@
     .secondSliderElement {
       display: flex;
       flex-direction: column;
-      animation: downSliderShow 20s infinite linear;
+      animation: downSliderShow 35s infinite linear;
       position: relative;
       @keyframes downSliderShow {
         0% {

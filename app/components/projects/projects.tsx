@@ -367,19 +367,32 @@ const alasElement: Project[] = [
     alt: "AzSpeech",
     link: "...",
     site: "azspeech.az",
-    description1: "",
-    description2: "",
-    description3: "",
-    description4: "",
-    description5: "",
-    description6: "",
-    description7: "",
-    description8: "",
-    description9: "",
-    description10: "",
-    description11: "",
-    description12: "",
-    description13: "",
+    description1:
+      "• ffmpeg/core:Core FFmpeg library for handling video and audio processing.",
+    description2:
+      "• ffmpeg/ffmpeg:FFmpeg library bindings for JavaScript, enabling video and audio processing.",
+    description3:
+      "• reduxjs/toolkit:A library for efficient Redux development, simplifying Redux setup and state management.",
+    description4:
+      "• ffmpeg:Another FFmpeg library for handling multimedia files.",
+    description5:
+      "• file-saver:A library for saving files on the client-side, useful for exporting data.",
+    description6:
+      "• jszip:A JavaScript library for creating, reading, and editing .zip files.",
+    description7:
+      "• lz-string:A library for compressing and decompressing strings.",
+    description8:
+      "• react:A popular JavaScript library for building user interfaces.",
+    description9:
+      "• react-dom:Facilitates interaction between React components and the DOM.",
+    description10:
+      "• react-redux:Official React bindings for Redux, enabling state management in React applications.",
+    description11:
+      "• react-router-dom:DOM bindings for React Router, allowing navigation between different views in a React application.",
+    description12:
+      "• sass:A CSS preprocessor that adds power and elegance to CSS with variables, nesting, and more.",
+    description13:
+      "• zipson:A library for compressing and serializing JSON objects.",
     description14: "",
     description15: "",
   },
@@ -392,10 +405,11 @@ const mstock: Project[] = [
     alt: "MStock",
     link: "https://mstock.az/",
     site: "mstock.az",
-    description1: "Description for MStock project.",
-    description2: "",
-    description3: "",
-    description4: "",
+    description1:
+      "• According to the request of the manager, the site was developed in vanilla.",
+    description2: "• It is the official website of the company.",
+    description3: "• There is responsiveness.",
+    description4: "• More css and js functionality is preferred here.",
     description5: "",
     description6: "",
     description7: "",
@@ -414,10 +428,11 @@ const mstock: Project[] = [
     alt: "MayakCargo",
     link: "https://cargo-pearl-chi.vercel.app/",
     site: "mayakcargo.az",
-    description1: "Description for Mayak Cargo project.",
-    description2: "",
-    description3: "",
-    description4: "",
+    description1:
+      "• According to the request of the manager, the site was developed in vanilla.",
+    description2: "• I used different animations.",
+    description3: "• There is responsiveness.",
+    description4: "• More css and js functionality is preferred here.",
     description5: "",
     description6: "",
     description7: "",
@@ -436,11 +451,12 @@ const mstock: Project[] = [
     alt: "Minik",
     link: "...",
     site: "minik.az",
-    description1: "Description for Minik project.",
-    description2: "",
-    description3: "",
-    description4: "",
-    description5: "",
+    description1:
+      "• According to the request of the manager, the site was developed in vanilla.",
+    description2: "• I used different animations.",
+    description3: "• There is responsiveness.",
+    description4: "• More css and js functionality is preferred here.",
+    description5: "• This site will be connected to the backend in the future.",
     description6: "",
     description7: "",
     description8: "",
@@ -458,11 +474,12 @@ const mstock: Project[] = [
     alt: "MayakMebel",
     link: "https://mayak-mebel.vercel.app/",
     site: "mayakMebel.az",
-    description1: "Description for Mayak Mebel project.",
-    description2: "",
-    description3: "",
-    description4: "",
-    description5: "",
+    description1:
+      "• According to the request of the manager, the site was developed in vanilla.",
+    description2: "• I used different animations.",
+    description3: "• There is responsiveness.",
+    description4: "• More css and js functionality is preferred here.",
+    description5: "• This site will be connected to the backend in the future.",
     description6: "",
     description7: "",
     description8: "",
@@ -480,10 +497,11 @@ const mstock: Project[] = [
     alt: "PutaLogistik",
     link: "https://puta-logistik.vercel.app/",
     site: "puta-logistik.az",
-    description1: "Description for Puta Logistik project.",
-    description2: "",
-    description3: "",
-    description4: "",
+    description1:
+      "• According to the request of the manager, the site was developed in vanilla.",
+    description2: "• I used different animations.",
+    description3: "• There is responsiveness.",
+    description4: "• More css and js functionality is preferred here.",
     description5: "",
     description6: "",
     description7: "",
@@ -502,11 +520,12 @@ const mstock: Project[] = [
     alt: "MenzilTap",
     link: "...",
     site: "menzilTap.az",
-    description1: "Description for Menzil Tap project.",
-    description2: "",
-    description3: "",
-    description4: "",
-    description5: "",
+    description1:
+      "• According to the request of the manager, the site was developed in vanilla.",
+    description2: "• I used different animations.",
+    description3: "• There is responsiveness.",
+    description4: "• More css and js functionality is preferred here.",
+    description5: "• This site will be connected to the backend in the future.",
     description6: "",
     description7: "",
     description8: "",
@@ -524,11 +543,12 @@ const mstock: Project[] = [
     alt: "IndiTap",
     link: "...",
     site: "IndiTap.az",
-    description1: "Description for Menzil Tap project.",
-    description2: "",
-    description3: "",
-    description4: "",
-    description5: "",
+    description1:
+      "• According to the request of the manager, the site was developed in vanilla.",
+    description2: "• I used different animations.",
+    description3: "• There is responsiveness.",
+    description4: "• More css and js functionality is preferred here.",
+    description5: "• This site will be connected to the backend in the future.",
     description6: "",
     description7: "",
     description8: "",
@@ -564,7 +584,8 @@ const freelanceWork: Company[] = [
     id: 1,
     image: FreelancerAzad,
     alt: "Freelance",
-    description: "Freelancer Azad",
+    description:
+      "Accepting additional work not only enriches my portfolio, but also promotes myself. React is my main preference for freelance projects, but I still consider the client's request as the main thing.",
   },
 ];
 
@@ -573,7 +594,8 @@ const webrandyCompany: Company[] = [
     id: 1,
     image: Webrandy,
     alt: "Webrandy Startup",
-    description: "Webrandy Startup",
+    description:
+      "Here, we mainly developed the sites of clients that the manager contacted or found himself. I worked in this startup for some time and gained some experience.",
   },
 ];
 
@@ -582,7 +604,8 @@ const alasCompany: Company[] = [
     id: 1,
     image: AlasEva,
     alt: "Alas Development Center",
-    description: "Alas Development Center",
+    description:
+      "After completing the 6-month front-end developer training, selected students joined the 4-month internship program at Alas Development Center, and I was one of those students. I worked on 2 big projects in a 4-month internship program.",
   },
 ];
 
@@ -591,7 +614,8 @@ const mstockCompany: Company[] = [
     id: 1,
     image: MStock,
     alt: "MStock Company",
-    description: "MStock Company",
+    description:
+      "In this company, I prepare websites in vanilla according to the request of the manager. I don't use Libraries or frameworks as per the request of the manager. The company is new and I am developing websites to promote the company.",
   },
 ];
 
