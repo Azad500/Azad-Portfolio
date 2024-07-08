@@ -20,7 +20,6 @@ import MenzilTap from "../../../assets/projects/MenzilTap.png";
 import AzadPortfolio from "../../../assets/projects/AzadPortfolio.png";
 import IndiTap from "../../../assets/projects/IndiTap.png";
 import FreelancerAzad from "../../../assets/images/freelancerAzad.jpg";
-import AlasCompany from "../../../assets/workHistory/AlasAcademy.png";
 import { useState } from "react";
 
 interface Project {
@@ -449,7 +448,7 @@ const mstock: Project[] = [
     id: 3,
     image: Minik,
     alt: "Minik",
-    link: "...",
+    link: "https://main--minikk.netlify.app/",
     site: "minik.az",
     description1:
       "• According to the request of the manager, the site was developed in vanilla.",
@@ -518,7 +517,7 @@ const mstock: Project[] = [
     id: 6,
     image: MenzilTap,
     alt: "MenzilTap",
-    link: "...",
+    link: "https://main--menziltap.netlify.app/",
     site: "menzilTap.az",
     description1:
       "• According to the request of the manager, the site was developed in vanilla.",
@@ -541,7 +540,7 @@ const mstock: Project[] = [
     id: 7,
     image: IndiTap,
     alt: "IndiTap",
-    link: "...",
+    link: "https://main--inditap.netlify.app/",
     site: "IndiTap.az",
     description1:
       "• According to the request of the manager, the site was developed in vanilla.",

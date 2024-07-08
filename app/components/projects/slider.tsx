@@ -90,7 +90,7 @@ const cardElements = [
     id: 12,
     image: Minik,
     alt: "Minik",
-    link: "...",
+    link: "https://main--minikk.netlify.app/",
   },
   {
     id: 13,
@@ -114,7 +114,7 @@ const cardElements = [
     id: 16,
     image: MenzilTap,
     alt: "MenzilTap",
-    link: "...",
+    link: "https://main--menziltap.netlify.app/",
   },
   {
     id: 17,
@@ -126,7 +126,7 @@ const cardElements = [
     id: 18,
     image: IndiTap,
     alt: "IndiTap",
-    link: "...",
+    link: "https://main--inditap.netlify.app/",
   },
 ];
 const repeatedData = Array.from(
