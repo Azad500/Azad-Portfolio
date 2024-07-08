@@ -11,11 +11,13 @@ import Certifications from "./components/certifications/certifications";
 import Projects from "./components/projects/projects";
 import Language from "./components/language/language";
 import Footer from "./components/footer/footer";
+import Evaluate from "./components/evaluate/evaluate";
 
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false);
   const [changeColor, setChangeColor] = useState(true);
   const [whiteText, setWhiteText] = useState(true);
+  const [evaluate, setEvaluate] = useState(false);
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
@@ -77,6 +79,15 @@ export default function Home() {
     toggleMenu();
     setChangeColor(true);
     setWhiteText(false);
+  };
+
+  const handleEvaluate = () => {
+    setEvaluate(true);
+    toggleMenu();
+  };
+
+  const handleCloseEvaluate = () => {
+    setEvaluate(false);
   };
 
   useEffect(() => {
@@ -168,9 +179,15 @@ export default function Home() {
         handleCertificationsRef={handleCertificationsRef}
         handleProjectsRef={handleProjectsRef}
         handleLanguageRef={handleLanguageRef}
+        handleEvaluate={handleEvaluate}
         changeColor={changeColor}
         whiteText={whiteText}
       />
+      {evaluate && (
+        <div className="evaluate">
+          <Evaluate handleCloseEvaluate={handleCloseEvaluate} />
+        </div>
+      )}
       <div ref={homeRef} className="section">
         <Header />
       </div>

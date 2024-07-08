@@ -14,6 +14,7 @@ interface MenuListProps {
   handleCertificationsRef: () => void;
   handleProjectsRef: () => void;
   handleLanguageRef: () => void;
+  handleEvaluate: () => void;
 }
 
 export default function MenuList({
@@ -27,6 +28,7 @@ export default function MenuList({
   handleCertificationsRef,
   handleProjectsRef,
   handleLanguageRef,
+  handleEvaluate,
 }: MenuListProps) {
   return (
     <section className={styles.menuListContainer}>
@@ -115,7 +117,7 @@ export default function MenuList({
               </a>
             </div>
           </li>
-          <li>
+          <li onClick={handleEvaluate}>
             <p>Evaluate</p>
           </li>
         </ul>
