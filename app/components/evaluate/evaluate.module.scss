@@ -2,83 +2,112 @@
 
 .evaluateContainer {
   width: 500px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 395px;
   background-color: white;
   border-radius: 20px;
   position: relative;
   @include responsive768 {
     width: 300px;
-    height: 280px;
   }
   h2 {
+    text-align: center;
     font-size: 30px;
     font-family: "Poppins";
   }
-  .starElement {
+  form {
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
-    p {
-      cursor: pointer;
-      font-size: 30px;
-      padding: 0 10px;
-      transition: color 0.3s;
-      &:hover,
-      &.hovered {
-        color: #facb1c;
-      }
-      @include responsive768 {
-        font-size: 20px;
-      }
-    }
-  }
-  .commentContainer {
-    width: 90%;
-    margin-bottom: 10px;
-    textarea {
-      width: 100%;
-      height: 130px;
-      resize: none;
-      padding: 5px;
+    input {
+      width: 230px;
+      margin: 10px 0;
+      padding: 5px 10px;
       font-size: 16px;
       border-radius: 10px;
+      border: 1px solid black;
       &::placeholder {
         font-family: "Poppins";
+      }
+      @include responsive768 {
+        font-size: 14px;
+        width: 170px;
+      }
+    }
+    .starElement {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      p {
+        cursor: pointer;
+        font-size: 30px;
+        padding: 0 10px;
+        transition: color 0.3s;
+        &:hover,
+        &.hovered {
+          color: #facb1c;
+        }
         @include responsive768 {
-          font-size: 14px;
+          font-size: 20px;
         }
       }
     }
-  }
-  .buttons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    button {
-      padding: 10px 25px;
-      border-radius: 10px;
-      border: none;
-      font-size: 14px;
-      font-family: "Poppins";
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.3s ease;
+    .thoughts {
+      width: 90%;
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-style: italic;
+      color: #b28f10;
       @include responsive768 {
-        font-size: 12px;
+        font-size: 14px;
       }
-      &:hover {
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.236);
+    }
+    .commentContainer {
+      width: 90%;
+      margin-bottom: 10px;
+      textarea {
+        width: 100%;
+        height: 130px;
+        resize: none;
+        padding: 5px;
+        font-size: 16px;
+        border-radius: 10px;
+        &::placeholder {
+          font-family: "Poppins";
+          @include responsive768 {
+            font-size: 14px;
+          }
+        }
       }
-      &:first-child {
-        background-color: black;
-        color: white;
-      }
-      &:last-child {
-        background-color: #facb1c;
-        color: black;
+    }
+    .buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      button {
+        padding: 10px 25px;
+        border-radius: 10px;
+        border: none;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        @include responsive768 {
+          font-size: 12px;
+        }
+        &:hover {
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.236);
+        }
+        &:first-child {
+          background-color: black;
+          color: white;
+        }
+        &:last-child {
+          background-color: #facb1c;
+          color: black;
+        }
       }
     }
   }

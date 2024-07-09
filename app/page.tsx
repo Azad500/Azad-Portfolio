@@ -18,6 +18,8 @@ export default function Home() {
   const [changeColor, setChangeColor] = useState(true);
   const [whiteText, setWhiteText] = useState(true);
   const [evaluate, setEvaluate] = useState(false);
+  const [currentSection, setCurrentSection] = useState<string>("home");
+
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
@@ -29,15 +31,15 @@ export default function Home() {
   const footerRef = useRef<HTMLDivElement>(null);
 
   const sectionRefs = [
-    homeRef,
-    aboutRef,
-    skillsRef,
-    workHistoryRef,
-    educationRef,
-    certificationsRef,
-    projectsRef,
-    languageRef,
-    footerRef,
+    { ref: homeRef, id: "home" },
+    { ref: aboutRef, id: "about" },
+    { ref: skillsRef, id: "skills" },
+    { ref: workHistoryRef, id: "workHistory" },
+    { ref: educationRef, id: "education" },
+    { ref: certificationsRef, id: "certifications" },
+    { ref: projectsRef, id: "projects" },
+    { ref: languageRef, id: "language" },
+    { ref: footerRef, id: "footer" },
   ];
 
   const toggleMenu = () => {
@@ -78,7 +80,6 @@ export default function Home() {
     setChangeColor(false);
     setWhiteText(true);
   };
-
   const handleCertificationsRef = () => {
     handleScrollToRef(certificationsRef);
     toggleMenu();
@@ -109,64 +110,48 @@ export default function Home() {
 
   const handleUpClick = () => {
     const currentIndex = sectionRefs.findIndex(
-      (ref) => ref.current && ref.current.getBoundingClientRect().top >= 0
+      (section) => section.id === currentSection
     );
     if (currentIndex > 0) {
-      handleScrollToRef(sectionRefs[currentIndex - 1]);
+      handleScrollToRef(sectionRefs[currentIndex - 1].ref);
     }
   };
 
   const handleDownClick = () => {
     const currentIndex = sectionRefs.findIndex(
-      (ref) => ref.current && ref.current.getBoundingClientRect().top >= 0
+      (section) => section.id === currentSection
     );
     if (currentIndex < sectionRefs.length - 1) {
-      handleScrollToRef(sectionRefs[currentIndex + 1]);
+      handleScrollToRef(sectionRefs[currentIndex + 1].ref);
     }
   };
 
   useEffect(() => {
     const sections = [
-      {
-        ref: homeRef,
-        changeColor: true,
-        whiteText: true,
-      },
-      {
-        ref: aboutRef,
-        changeColor: false,
-        whiteText: true,
-      },
-      {
-        ref: skillsRef,
-        changeColor: true,
-        whiteText: true,
-      },
+      { ref: homeRef, id: "home", changeColor: true, whiteText: true },
+      { ref: aboutRef, id: "about", changeColor: false, whiteText: true },
+      { ref: skillsRef, id: "skills", changeColor: true, whiteText: true },
       {
         ref: workHistoryRef,
+        id: "workHistory",
         changeColor: false,
         whiteText: false,
       },
       {
         ref: educationRef,
+        id: "education",
         changeColor: false,
         whiteText: true,
       },
       {
         ref: certificationsRef,
+        id: "certifications",
         changeColor: true,
         whiteText: false,
       },
-      {
-        ref: projectsRef,
-        changeColor: true,
-        whiteText: false,
-      },
-      {
-        ref: languageRef,
-        changeColor: true,
-        whiteText: false,
-      },
+      { ref: projectsRef, id: "projects", changeColor: true, whiteText: false },
+      { ref: languageRef, id: "language", changeColor: true, whiteText: false },
+      { ref: footerRef, id: "footer", changeColor: true, whiteText: false },
     ];
 
     const observer = new IntersectionObserver(
@@ -179,6 +164,7 @@ export default function Home() {
             if (section) {
               setChangeColor(section.changeColor);
               setWhiteText(section.whiteText);
+              setCurrentSection(section.id);
             }
           }
         });
@@ -204,10 +190,16 @@ export default function Home() {
   return (
     <div className="fullpage-container">
       <div className="buttons">
-        <button className="up-button" onClick={handleUpClick}>
+        <button
+          className={currentSection === "home" ? "up-none" : "up-button"}
+          onClick={handleUpClick}
+        >
           ▲
         </button>
-        <button className="down-button" onClick={handleDownClick}>
+        <button
+          className={currentSection === "footer" ? "down-none" : "down-button"}
+          onClick={handleDownClick}
+        >
           ▼
         </button>
       </div>

@@ -18,7 +18,7 @@
     align-items: flex-start;
     gap: 20px;
     @include responsive1024 {
-      height: 90vh;
+      height: 92vh;
       padding-left: 20px;
     }
     .upSideElement {
@@ -82,7 +82,7 @@
       @include responsive1300 {
         flex-direction: column;
         margin-top: 10px;
-        gap: 20px;
+        gap: 0;
       }
       p {
         font-family: "Poppins";
@@ -119,7 +119,7 @@
     display: flex;
     justify-content: flex-end;
     @include responsive768 {
-      height: 50vh;
+      height: 55vh;
     }
     @include responsive768to1024 {
       height: 40vh;

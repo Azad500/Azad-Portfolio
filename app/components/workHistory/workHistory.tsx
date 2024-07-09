@@ -145,7 +145,6 @@ export default function WorkHistory() {
               </div>
             </li>
           ))}
-          ;
         </ul>
       </div>
     </section>

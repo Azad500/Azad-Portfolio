@@ -13,12 +13,12 @@ body::-webkit-scrollbar {
 }
 .evaluate {
   position: fixed;
-  top: 50%;
+  top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2000;
   width: 100%;
-  height: 100vh;
+  min-height: 200vh;
   background-color: rgba(0, 0, 0, 0.318);
   display: flex;
   justify-content: center;
@@ -61,5 +61,17 @@ body {
     color: black;
     background-color: #facb1c;
     border: 1px solid black;
+  }
+  .up-none {
+    display: none;
+  }
+  .down-none {
+    display: none;
+  }
+  .up-button {
+    display: block;
+  }
+  .down-button {
+    display: block;
   }
 }
