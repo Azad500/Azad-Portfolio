@@ -27,55 +27,70 @@ export default function Home() {
   const projectsRef = useRef<HTMLDivElement>(null);
   const languageRef = useRef<HTMLDivElement>(null);
 
+  const sectionRefs = [
+    homeRef,
+    aboutRef,
+    skillsRef,
+    workHistoryRef,
+    educationRef,
+    certificationsRef,
+    projectsRef,
+    languageRef,
+  ];
+
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
 
+  const handleScrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const handleHomeRef = () => {
-    homeRef.current?.scrollIntoView({ behavior: "smooth" });
+    handleScrollToRef(homeRef);
     toggleMenu();
     setChangeColor(true);
     setWhiteText(true);
   };
   const handleAboutRef = () => {
-    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+    handleScrollToRef(aboutRef);
     toggleMenu();
     setChangeColor(false);
     setWhiteText(true);
   };
   const handleSkillsRef = () => {
-    skillsRef.current?.scrollIntoView({ behavior: "smooth" });
+    handleScrollToRef(skillsRef);
     toggleMenu();
     setChangeColor(true);
     setWhiteText(true);
   };
   const handleWorkHistoryRef = () => {
-    workHistoryRef.current?.scrollIntoView({ behavior: "smooth" });
+    handleScrollToRef(workHistoryRef);
     toggleMenu();
     setChangeColor(false);
     setWhiteText(false);
   };
   const handleEducationRef = () => {
-    educationRef.current?.scrollIntoView({ behavior: "smooth" });
+    handleScrollToRef(educationRef);
     toggleMenu();
     setChangeColor(false);
     setWhiteText(true);
   };
 
   const handleCertificationsRef = () => {
-    certificationsRef.current?.scrollIntoView({ behavior: "smooth" });
+    handleScrollToRef(certificationsRef);
     toggleMenu();
     setChangeColor(true);
     setWhiteText(false);
   };
   const handleProjectsRef = () => {
-    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+    handleScrollToRef(projectsRef);
     toggleMenu();
     setChangeColor(true);
     setWhiteText(false);
   };
   const handleLanguageRef = () => {
-    languageRef.current?.scrollIntoView({ behavior: "smooth" });
+    handleScrollToRef(languageRef);
     toggleMenu();
     setChangeColor(true);
     setWhiteText(false);
@@ -88,6 +103,24 @@ export default function Home() {
 
   const handleCloseEvaluate = () => {
     setEvaluate(false);
+  };
+
+  const handleUpClick = () => {
+    const currentIndex = sectionRefs.findIndex(
+      (ref) => ref.current && ref.current.getBoundingClientRect().top >= 0
+    );
+    if (currentIndex > 0) {
+      handleScrollToRef(sectionRefs[currentIndex - 1]);
+    }
+  };
+
+  const handleDownClick = () => {
+    const currentIndex = sectionRefs.findIndex(
+      (ref) => ref.current && ref.current.getBoundingClientRect().top >= 0
+    );
+    if (currentIndex < sectionRefs.length - 1) {
+      handleScrollToRef(sectionRefs[currentIndex + 1]);
+    }
   };
 
   useEffect(() => {
@@ -168,6 +201,14 @@ export default function Home() {
 
   return (
     <div className="fullpage-container">
+      <div className="buttons">
+        <button className="up-button" onClick={handleUpClick}>
+          &#62;
+        </button>
+        <button className="down-button" onClick={handleDownClick}>
+          &#62;
+        </button>
+      </div>
       <Navbar
         toggleMenu={toggleMenu}
         openMenu={openMenu}

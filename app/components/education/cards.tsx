@@ -1,5 +1,5 @@
 import styles from "./cards.module.scss";
-import School from "../../../assets/workHistory/School257.png";
+import School from "../../../assets/workHistory/School2.png";
 import Bachelor from "../../../assets/workHistory/UnecBachelor.png";
 import Master from "../../../assets/workHistory/UnecMaster.png";
 import AzFin from "../../../assets/workHistory/Azfin.png";
@@ -99,7 +99,7 @@ const educationElement = [
     educationImageAlt: "Bachelor",
   },
   {
-    courseName: "Full Secondary School No. 257",
+    courseName: "Full Secondary School No. 2",
     educationName: "Secondary Education",
     about:
       "The first education is where I started my life and it has a very high moral value for me. Because, along with my first education, I spent most of my childhood years here.",

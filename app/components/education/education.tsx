@@ -1,6 +1,6 @@
 import styles from "./education.module.scss";
 import EducationKart from "../../../assets/images/educationCart.png";
-import School from "../../../assets/workHistory/School257.png";
+import School from "../../../assets/workHistory/School2.png";
 import Bachelor from "../../../assets/workHistory/UnecBachelor.png";
 import Master from "../../../assets/workHistory/UnecMaster.png";
 import AzFin from "../../../assets/workHistory/Azfin.png";
@@ -26,6 +26,7 @@ const educationElement = [
     educationDate: "15.03.2024 - 31.08.2024",
     siteName: "Adas.az",
     siteLink: "https://adas.az/",
+    location: "Baku, Azerbaijan",
     educationImage: AdasAcademy,
     mobileEducationImage: MobileAdasAcademy,
     educationImageAlt: "Adas Academy",
@@ -39,6 +40,7 @@ const educationElement = [
     educationDate: "01.09.2023 - 01.10.2023",
     siteName: "Dusunce Academy",
     siteLink: "https://www.instagram.com/dusunce_academy/",
+    location: "Baku, Azerbaijan",
     educationImage: DusunceAcademy,
     mobileEducationImage: MobileDusunceAcademy,
     educationImageAlt: "Dusunce Academy",
@@ -52,6 +54,7 @@ const educationElement = [
     educationDate: "10.05.2023 - 10.11.2023",
     siteName: "Alas.edu.az",
     siteLink: "https://alas.edu.az/",
+    location: "Baku, Azerbaijan",
     educationImage: AlasAcademy,
     mobileEducationImage: MobileAlasAcademy,
     educationImageAlt: "Alas Academy",
@@ -64,6 +67,7 @@ const educationElement = [
     educationDate: "01.07.2022 - 30.09.2022",
     siteName: "Honours.academy",
     siteLink: "https://honours.academy/",
+    location: "Baku, Azerbaijan",
     educationImage: HonoursAcademy,
     mobileEducationImage: HonoursAcademy,
     educationImageAlt: "Honours Academy",
@@ -77,6 +81,7 @@ const educationElement = [
     educationDate: "01.11.2020 - 30.04.2021",
     siteName: "ElcPro.az",
     siteLink: "https://elcpro.az/",
+    location: "Baku, Azerbaijan",
     educationImage: ElcPro,
     mobileEducationImage: MobilElcPro,
     educationImageAlt: "ElcPro",
@@ -90,6 +95,7 @@ const educationElement = [
     educationDate: "01.03.2019 - 31.05.2019",
     siteName: "AzFin Academy",
     siteLink: "https://www.facebook.com/AzFinAcademy/",
+    location: "Baku, Azerbaijan",
     educationImage: AzFin,
     mobileEducationImage: AzFin,
     educationImageAlt: "AzFin",
@@ -103,6 +109,7 @@ const educationElement = [
     educationDate: "15.09.2017 - 31.03.2019",
     siteName: "Unec.edu.az",
     siteLink: "https://unec.edu.az/",
+    location: "Baku, Azerbaijan",
     educationImage: Master,
     mobileEducationImage: Master,
     educationImageAlt: "Master",
@@ -116,19 +123,21 @@ const educationElement = [
     educationDate: "15.09.2013 - 30.06.2017",
     siteName: "Unec.edu.az",
     siteLink: "https://unec.edu.az/",
+    location: "Baku, Azerbaijan",
     educationImage: Bachelor,
     mobileEducationImage: Bachelor,
     educationImageAlt: "Bachelor",
   },
   {
     id: 9,
-    courseName: "Full Secondary School No. 257",
+    courseName: "Full Secondary School No. 2",
     educationName: "Secondary Education",
     about:
       "The first education is where I started my life and it has a very high moral value for me. Because, along with my first education, I spent most of my childhood years here.",
     educationDate: "01.09.2002 - 31.05.2013",
-    siteName: "Bakimektebleri.edu.az",
-    siteLink: "https://bakimektebleri.edu.az/257/",
+    siteName: "SecondarySchool",
+    siteLink: "https://www.facebook.com/usertehsil/",
+    location: "Beylegan, Azerbaijan",
     educationImage: School,
     mobileEducationImage: School,
     educationImageAlt: "School",
@@ -221,7 +230,7 @@ export default function Education() {
             {expandedCard === element.id && (
               <div className={styles.mobilEducationText}>
                 <p>{element.about}</p>
-                <span>Baku, Azerbaijan</span>
+                <span>{element.location}</span>
                 <span>{element.educationDate}</span>
                 <a target="_blank" href={element.siteLink}>
                   {element.siteName}
@@ -233,7 +242,7 @@ export default function Education() {
                 <h2>{element.educationName}</h2>
                 <span>{element.courseName}</span>
                 <p>{element.about}</p>
-                <span>Baku, Azerbaijan</span>
+                <span>{element.location}</span>
                 <span>{element.educationDate}</span>
                 <a target="_blank" href={element.siteLink}>
                   {element.siteName}

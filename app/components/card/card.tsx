@@ -8,7 +8,7 @@ import ElcPro from "../../../assets/certifications/ElcPro.png";
 import AzFin from "../../../assets/certifications/AzFin.png";
 import MasterDegree from "../../../assets/certifications/MasterDegree.png";
 import BachelorDegree from "../../../assets/certifications/BachelorDegree.png";
-import School257 from "../../../assets/certifications/School257.png";
+import School2 from "../../../assets/certifications/School2.png";
 
 const cardElements = [
   {
@@ -16,58 +16,80 @@ const cardElements = [
     image: AdasDiploma,
     alt: "AdasDiploma",
     job: "Full Stack Developer",
+    pdf: "",
   },
   {
     name: "Dushunce",
     image: DusunceAcademy,
     alt: "DushunceDiploma",
     job: "Trading",
+    pdf: "/assets/pdf/DusunceAcademy.pdf",
   },
   {
     name: "Alas",
     image: AlasDiploma,
     alt: "AlasDiploma",
     job: "Front-end Developer",
+    pdf: "/assets/pdf/AlasDiploma.pdf",
   },
   {
     name: "Honours",
     image: HonoursAcademy,
     alt: "HonoursDiploma",
     job: "F3",
+    pdf: "/assets/pdf/HonoursAcademy.pdf",
   },
   {
     name: "ElcPro",
     image: ElcPro,
     alt: "ElcProDiploma",
     job: "English",
+    pdf: "/assets/pdf/ElcPro.pdf",
   },
   {
     name: "AzFin",
     image: AzFin,
     alt: "AzFinDiploma",
     job: "Accounting",
+    pdf: "/assets/pdf/AzFin.pdf",
   },
   {
     name: "UNEC",
     image: MasterDegree,
     alt: "MasterDiploma",
     job: "Master Degree",
+    pdf: "/assets/pdf/Master.pdf",
   },
   {
     name: "UNEC",
     image: BachelorDegree,
     alt: "BachelorDiploma",
     job: "Bachelor Degree",
+    pdf: "/assets/pdf/Bachelor.pdf",
   },
   {
-    name: "School No. 257",
-    image: School257,
-    alt: "School257Diploma",
+    name: "School No. 2",
+    image: School2,
+    alt: "School2Diploma",
     job: "Secondary Education",
+    pdf: "/assets/pdf/School.pdf",
   },
 ];
 
 export default function Card() {
+  const handleDownload = (pdfPath: string) => {
+    if (pdfPath) {
+      const link = document.createElement("a");
+      link.href = pdfPath;
+      const filename = pdfPath.split("/").pop();
+      link.download = filename || "";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      alert("No PDF available for download.");
+    }
+  };
   return (
     <section className={styles.cardContainer}>
       {cardElements.map((cardElement, index) => (
@@ -89,7 +111,9 @@ export default function Card() {
               </div>
             </div>
             <div className={styles.back}>
-              <button>Install</button>
+              <button onClick={() => handleDownload(cardElement.pdf)}>
+                Install
+              </button>
             </div>
           </div>
         </div>
