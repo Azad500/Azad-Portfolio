@@ -203,10 +203,10 @@ export default function Home() {
     <div className="fullpage-container">
       <div className="buttons">
         <button className="up-button" onClick={handleUpClick}>
-          &#62;
+          ▲
         </button>
         <button className="down-button" onClick={handleDownClick}>
-          &#62;
+          ▼
         </button>
       </div>
       <Navbar
