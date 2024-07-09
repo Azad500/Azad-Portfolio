@@ -26,6 +26,7 @@ export default function Home() {
   const certificationsRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const languageRef = useRef<HTMLDivElement>(null);
+  const footerRef = useRef<HTMLDivElement>(null);
 
   const sectionRefs = [
     homeRef,
@@ -36,6 +37,7 @@ export default function Home() {
     certificationsRef,
     projectsRef,
     languageRef,
+    footerRef,
   ];
 
   const toggleMenu = () => {
@@ -253,7 +255,7 @@ export default function Home() {
       <div ref={languageRef} className="section">
         <Language />
       </div>
-      <div className="section">
+      <div ref={footerRef} className="section">
         <Footer />
       </div>
     </div>
