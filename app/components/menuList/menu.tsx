@@ -118,7 +118,7 @@ export default function MenuList({
             </div>
           </li>
           <li onClick={handleEvaluate}>
-            <p>Evaluate</p>
+            <p>Rate me</p>
           </li>
         </ul>
       </div>

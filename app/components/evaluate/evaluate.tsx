@@ -44,8 +44,7 @@ export default function Evaluate({ handleCloseEvaluate }: EvaluateProps) {
 
   return (
     <section className={styles.evaluateContainer}>
-      <h2>Evaluate</h2>
-
+      <h2>Rate me</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -89,7 +88,9 @@ export default function Evaluate({ handleCloseEvaluate }: EvaluateProps) {
           <button type="button" onClick={handleCloseEvaluate}>
             Back
           </button>
-          <button type="submit">Send</button>
+          <button type="submit" onClick={handleCloseEvaluate}>
+            Send
+          </button>
         </div>
       </form>
     </section>
