@@ -19,6 +19,7 @@ import Mico from "../../../assets/projects/Mico.png";
 import MenzilTap from "../../../assets/projects/MenzilTap.png";
 import AzadPortfolio from "../../../assets/projects/AzadPortfolio.png";
 import IndiTap from "../../../assets/projects/IndiTap.png";
+import MyWork from "../../../assets/projects/MyWork.png";
 import FreelancerAzad from "../../../assets/images/freelancerAzad.jpg";
 import { useState } from "react";
 
@@ -542,6 +543,29 @@ const mstock: Project[] = [
     alt: "IndiTap",
     link: "https://main--inditap.netlify.app/",
     site: "IndiTap.az",
+    description1:
+      "• According to the request of the manager, the site was developed in vanilla.",
+    description2: "• I used different animations.",
+    description3: "• There is responsiveness.",
+    description4: "• More css and js functionality is preferred here.",
+    description5: "• This site will be connected to the backend in the future.",
+    description6: "",
+    description7: "",
+    description8: "",
+    description9: "",
+    description10: "",
+    description11: "",
+    description12: "",
+    description13: "",
+    description14: "",
+    description15: "",
+  },
+  {
+    id: 8,
+    image: MyWork,
+    alt: "MyWork",
+    link: "https://main--mywork-az.netlify.app/",
+    site: "MyWork.az",
     description1:
       "• According to the request of the manager, the site was developed in vanilla.",
     description2: "• I used different animations.",
