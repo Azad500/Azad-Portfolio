@@ -1,0 +1,56 @@
+@import "../../responsive/responsive.scss";
+.otherContainer {
+  display: flex;
+  gap: 50px;
+  padding: 40px 20px;
+  @include responsive768 {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 10px;
+    gap: 20px;
+  }
+  .ratingElement,
+  .downloadCertification {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    h2 {
+      color: white;
+    }
+    .comments {
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+    .ratingContainer,
+    .certificationContainer {
+      width: 300px;
+      max-height: 500px;
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      border: 1px solid white;
+      padding: 10px;
+      border-radius: 5px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .rating,
+      .certification {
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 10px;
+        color: white;
+        width: 100%;
+        p {
+          span {
+            color: #facb1c;
+          }
+        }
+      }
+    }
+  }
+}

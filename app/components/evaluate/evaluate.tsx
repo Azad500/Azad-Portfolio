@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import styles from "./evaluate.module.scss";
+import api from "../../axios/axios";
 
 interface EvaluateProps {
   handleCloseEvaluate: () => void;
@@ -33,13 +34,31 @@ export default function Evaluate({ handleCloseEvaluate }: EvaluateProps) {
     setComment(event.target.value);
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!fullName || !comment || selectedStar === 0) {
       alert("Full Name, Comment, and Star rating are required");
       return;
     }
-    console.log({ fullName, comment, selectedStar });
+
+    const formData = {
+      fullName,
+      comment,
+      star: selectedStar,
+    };
+
+    try {
+      const response = await api.post("rating", formData);
+
+      if (response.status < 200 || response.status >= 300) {
+        throw new Error("Network response was not ok");
+      }
+      console.log("Data successfully posted:", response.data);
+    } catch (error) {
+      console.error("Error posting data:", error);
+    }
+
+    handleCloseEvaluate();
   };
 
   return (
@@ -48,7 +67,7 @@ export default function Evaluate({ handleCloseEvaluate }: EvaluateProps) {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="FullName"
+          placeholder="Full Name"
           required
           value={fullName}
           onChange={handleFullNameChange}
@@ -88,9 +107,7 @@ export default function Evaluate({ handleCloseEvaluate }: EvaluateProps) {
           <button type="button" onClick={handleCloseEvaluate}>
             Back
           </button>
-          <button type="submit" onClick={handleCloseEvaluate}>
-            Send
-          </button>
+          <button type="submit">Send</button>
         </div>
       </form>
     </section>

@@ -19,6 +19,7 @@ import MenzilTap from "../../../assets/projects/MenzilTap.png";
 import AzadPortfolio from "../../../assets/projects/AzadPortfolio.png";
 import IndiTap from "../../../assets/projects/IndiTap.png";
 import MyWork from "../../../assets/projects/MyWork.png";
+import GlobalAptek from "../../../assets/projects/GlobalAptek.png";
 
 const cardElements = [
   {
@@ -134,6 +135,12 @@ const cardElements = [
     image: MyWork,
     alt: "MyWork",
     link: "https://main--mywork-az.netlify.app/",
+  },
+  {
+    id: 20,
+    image: GlobalAptek,
+    alt: "Global Aptek",
+    link: "https://main--globalaptek.netlify.app/",
   },
 ];
 const repeatedData = Array.from(

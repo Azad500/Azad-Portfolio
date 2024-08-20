@@ -189,66 +189,70 @@ export default function Home() {
 
   return (
     <div className="fullpage-container">
-      <div className="buttons">
-        <button
-          className={currentSection === "home" ? "up-none" : "up-button"}
-          onClick={handleUpClick}
-        >
-          ▲
-        </button>
-        <button
-          className={currentSection === "footer" ? "down-none" : "down-button"}
-          onClick={handleDownClick}
-        >
-          ▼
-        </button>
-      </div>
-      <Navbar
-        toggleMenu={toggleMenu}
-        openMenu={openMenu}
-        handleHomeRef={handleHomeRef}
-        handleAboutRef={handleAboutRef}
-        handleSkillsRef={handleSkillsRef}
-        handleWorkHistoryRef={handleWorkHistoryRef}
-        handleEducationRef={handleEducationRef}
-        handleCertificationsRef={handleCertificationsRef}
-        handleProjectsRef={handleProjectsRef}
-        handleLanguageRef={handleLanguageRef}
-        handleEvaluate={handleEvaluate}
-        changeColor={changeColor}
-        whiteText={whiteText}
-      />
-      {evaluate && (
-        <div className="evaluate">
-          <Evaluate handleCloseEvaluate={handleCloseEvaluate} />
+      <div className="fullpage-element">
+        <div className="buttons">
+          <button
+            className={currentSection === "home" ? "up-none" : "up-button"}
+            onClick={handleUpClick}
+          >
+            ▲
+          </button>
+          <button
+            className={
+              currentSection === "footer" ? "down-none" : "down-button"
+            }
+            onClick={handleDownClick}
+          >
+            ▼
+          </button>
         </div>
-      )}
-      <div ref={homeRef} className="section">
-        <Header />
-      </div>
-      <div ref={aboutRef} className="section">
-        <About />
-      </div>
-      <div ref={skillsRef} className="section">
-        <Skills />
-      </div>
-      <div ref={workHistoryRef} className="section">
-        <WorkHistory />
-      </div>
-      <div ref={educationRef} className="section">
-        <Education />
-      </div>
-      <div ref={certificationsRef} className="section">
-        <Certifications />
-      </div>
-      <div ref={projectsRef} className="section">
-        <Projects />
-      </div>
-      <div ref={languageRef} className="section">
-        <Language />
-      </div>
-      <div ref={footerRef} className="section">
-        <Footer />
+        <Navbar
+          toggleMenu={toggleMenu}
+          openMenu={openMenu}
+          handleHomeRef={handleHomeRef}
+          handleAboutRef={handleAboutRef}
+          handleSkillsRef={handleSkillsRef}
+          handleWorkHistoryRef={handleWorkHistoryRef}
+          handleEducationRef={handleEducationRef}
+          handleCertificationsRef={handleCertificationsRef}
+          handleProjectsRef={handleProjectsRef}
+          handleLanguageRef={handleLanguageRef}
+          handleEvaluate={handleEvaluate}
+          changeColor={changeColor}
+          whiteText={whiteText}
+        />
+        {evaluate && (
+          <div className="evaluate">
+            <Evaluate handleCloseEvaluate={handleCloseEvaluate} />
+          </div>
+        )}
+        <div ref={homeRef} className="section">
+          <Header />
+        </div>
+        <div ref={aboutRef} className="section">
+          <About />
+        </div>
+        <div ref={skillsRef} className="section">
+          <Skills />
+        </div>
+        <div ref={workHistoryRef} className="section">
+          <WorkHistory />
+        </div>
+        <div ref={educationRef} className="section">
+          <Education />
+        </div>
+        <div ref={certificationsRef} className="section">
+          <Certifications />
+        </div>
+        <div ref={projectsRef} className="section">
+          <Projects />
+        </div>
+        <div ref={languageRef} className="section">
+          <Language />
+        </div>
+        <div ref={footerRef} className="section">
+          <Footer />
+        </div>
       </div>
     </div>
   );

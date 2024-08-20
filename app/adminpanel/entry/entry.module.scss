@@ -1,0 +1,206 @@
+@import "../../responsive/responsive.scss";
+.entryContainer {
+  width: 100%;
+  padding: 40px 25px;
+  display: flex;
+  @include responsive768 {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .backgroundImageElement {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    width: 275px;
+    @include responsive768to1024 {
+      width: 350px;
+    }
+    @include responsiveMin1024 {
+      width: 50%;
+    }
+    li:first-child {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      h2 {
+        color: white;
+        font-family: "Poppins";
+        @include responsive768 {
+          font-size: 16px;
+        }
+      }
+      input {
+        border: none;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-family: "Poppins";
+        @include responsive768 {
+          padding: 3px;
+        }
+        @include responsiveMin1024 {
+          width: 200px;
+        }
+      }
+    }
+    li:nth-child(2) {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 10px;
+      h3 {
+        color: white;
+        font-family: "Poppins";
+        font-weight: 500;
+        @include responsive768 {
+          font-size: 14px;
+        }
+      }
+      .btn {
+        background-color: #facb1c;
+        color: black;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: "Poppins";
+        font-weight: 500;
+        @include responsive768 {
+          padding: 5px 15px;
+        }
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+      input {
+        color: white;
+        visibility: hidden;
+      }
+    }
+    li:nth-child(3) {
+      width: 260px;
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      .previewContainer {
+        position: absolute;
+        top: 10px;
+        left: 165px;
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+        @include responsive768 {
+          left: 110px;
+        }
+        .previewImage {
+          width: 100px;
+          border-radius: 10px;
+          z-index: 100;
+        }
+        .checkIcon {
+          color: green;
+        }
+      }
+      .bigBorder {
+        position: absolute;
+        top: 0;
+        left: 155px;
+        width: 120px;
+        height: 120px;
+        border: 1px dashed white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include responsive768 {
+          left: 100px;
+        }
+        .smallBorder {
+          width: 80px;
+          height: 80px;
+          border: 1px dashed white;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  .sosialNetworkContainer {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    @include responsive768 {
+      position: absolute;
+      top: 350px;
+    }
+    @include responsiveMin1024 {
+      width: 50%;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      h2 {
+        color: white;
+        font-family: "Poppins";
+        width: 150px;
+        @include responsive768 {
+          width: 100px;
+          font-size: 16px;
+        }
+      }
+      input {
+        border: none;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-family: "Poppins";
+        @include responsive768 {
+          padding: 3px;
+          width: 150px;
+        }
+        @include responsiveMin1024 {
+          width: 250px;
+        }
+      }
+    }
+  }
+  .emptyElement {
+    width: 100%;
+    height: 400px;
+    z-index: -1;
+    @include responsiveMin1024 {
+      display: none;
+    }
+  }
+  .saveElement {
+    @include responsiveMin768 {
+      position: absolute;
+      left: 25px;
+      top: 500px;
+    }
+    .saveBtn {
+      background-color: #facb1c;
+      padding: 10px 30px;
+      border-radius: 10px;
+      border: none;
+      font-family: "Poppins";
+      font-weight: bold;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.05);
+      }
+      @include responsiveMin1024 {
+        padding: 15px 40px;
+      }
+    }
+  }
+}

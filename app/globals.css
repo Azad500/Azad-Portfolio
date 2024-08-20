@@ -6,7 +6,7 @@
 body::-webkit-scrollbar {
   display: none;
 }
-.fullpage-container {
+.fullpage-element {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -30,8 +30,7 @@ body::-webkit-scrollbar {
   height: 100vh;
   scroll-snap-align: start;
 }
-html,
-body {
+.fullpage-container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
@@ -39,8 +38,7 @@ body {
   display: none;
 }
 @media screen and (max-width: 767px) {
-  html,
-  body {
+  .fullpage-element {
     overflow-y: hidden;
   }
   .buttons {

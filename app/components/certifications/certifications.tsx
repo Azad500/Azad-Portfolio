@@ -9,7 +9,8 @@ import AzFin from "../../../assets/certifications/AzFin.png";
 import MasterDegree from "../../../assets/certifications/MasterDegree.png";
 import BachelorDegree from "../../../assets/certifications/BachelorDegree.png";
 import School2 from "../../../assets/certifications/School2.png";
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
+import api from "../../axios/axios";
 
 const cardElements = [
   {
@@ -85,18 +86,26 @@ const cardElements = [
     pdf: "/assets/pdf/School.pdf",
   },
 ];
+
 export default function Certifications() {
   const [showPopUp, setShowPopUp] = useState(false);
   const [currentCardId, setCurrentCardId] = useState<number | null>(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    surname: "",
+    email: "",
+  });
 
   const handlePopUp = (id: number) => {
     setCurrentCardId(id);
     setShowPopUp(true);
   };
+
   const handleClosePopUp = () => {
     setShowPopUp(false);
     setCurrentCardId(null);
   };
+
   const handleDownload = (pdfPath: string) => {
     if (pdfPath) {
       const link = document.createElement("a");
@@ -110,23 +119,38 @@ export default function Certifications() {
       alert("No PDF available for download.");
     }
   };
-  const handleFormSubmit = (e: React.FormEvent) => {
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (currentCardId !== null) {
       const card = cardElements.find((card) => card.id === currentCardId);
       if (card) {
-        handleDownload(card.pdf);
-        handleClosePopUp();
+        try {
+          const response = await api.post("uploaded", formData);
+          if (response.status < 200 || response.status >= 300) {
+            throw new Error("Network response was not ok");
+          }
+          handleDownload(card.pdf);
+          handleClosePopUp();
+        } catch (error) {
+          console.error("Error posting data:", error);
+        }
       }
     }
   };
+
   return (
     <section className={styles.certificationsContainer}>
       <div className={styles.overlay}></div>
-      <Card
-        cardElements={cardElements}
-        handlePopUp={handlePopUp}
-      />
+      <Card cardElements={cardElements} handlePopUp={handlePopUp} />
       {showPopUp && (
         <div className={styles.popUpContainer}>
           <form onSubmit={handleFormSubmit}>
@@ -137,17 +161,21 @@ export default function Certifications() {
             </p>
             <input
               type="text"
-              name="Name"
+              name="name"
               id="name"
               placeholder="Name"
               required
+              value={formData.name}
+              onChange={handleInputChange}
             />
             <input
               type="text"
-              name="SurName"
-              id="surName"
-              placeholder="SurName"
+              name="surname"
+              id="surname"
+              placeholder="Surname"
               required
+              value={formData.surname}
+              onChange={handleInputChange}
             />
             <input
               type="email"
@@ -155,18 +183,15 @@ export default function Certifications() {
               id="email"
               placeholder="Email"
               required
+              value={formData.email}
+              onChange={handleInputChange}
             />
+            <input type="submit" name="download" id="submit" value="Download" />
             <input
-              type="submit"
-              name="download"
-              id="submit"
-              value={"Download"}
-            />
-            <input
-              type="submit"
+              type="button"
               name="back"
               id="submit"
-              value={"Back"}
+              value="Back"
               onClick={handleClosePopUp}
             />
           </form>
