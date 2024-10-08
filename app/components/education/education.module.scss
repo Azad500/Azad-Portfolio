@@ -24,9 +24,9 @@
     h2 {
       font-family: "Poppins";
       font-weight: bold;
-      font-size: 80px;
+      font-size: 70px;
       @include responsive768 {
-        font-size: 40px;
+        font-size: 35px;
       }
     }
     p {
