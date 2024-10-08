@@ -22,16 +22,6 @@ export default function About() {
             get to know me. Thank you very much.
           </p>
         </div>
-        <div className={styles.logoElement}>
-          <Image
-            className={styles.logo}
-            src={BlackLogo}
-            alt="Black Logo"
-            width={400}
-            height={400}
-            priority
-          />
-        </div>
         <div className={styles.circle}>
           <Image
             className={styles.circleImage}
