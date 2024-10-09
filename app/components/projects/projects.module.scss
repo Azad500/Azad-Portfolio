@@ -254,7 +254,7 @@
     box-sizing: border-box;
     overflow: hidden;
     position: absolute;
-    bottom: 13%;
+    bottom: 15%;
     @include responsiveMin768 {
       display: none;
     }
