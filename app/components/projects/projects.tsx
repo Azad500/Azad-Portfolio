@@ -229,11 +229,8 @@ const freelanceElement: Project[] = [
     description14: "",
     description15: "",
   },
-];
-
-const webrandyStartuup: Project[] = [
   {
-    id: 1,
+    id: 7,
     image: Webrandy,
     alt: "Webrandy Startup",
     link: "https://webrandy.com/",
@@ -265,7 +262,7 @@ const webrandyStartuup: Project[] = [
     description15: "",
   },
   {
-    id: 2,
+    id: 8,
     image: AddressArch,
     alt: "Adress Arch",
     link: "https://address-arch.vercel.app/",
@@ -298,7 +295,7 @@ const webrandyStartuup: Project[] = [
     description15: "",
   },
   {
-    id: 3,
+    id: 9,
     image: BestPrint,
     alt: "Best Print",
     link: "...",
@@ -324,11 +321,8 @@ const webrandyStartuup: Project[] = [
     description14: "",
     description15: "",
   },
-];
-
-const alasElement: Project[] = [
   {
-    id: 1,
+    id: 10,
     image: AlasEva,
     alt: "Alas Eva",
     link: "https://web.alasdevcenter.com/",
@@ -363,7 +357,7 @@ const alasElement: Project[] = [
       "• Slick-Carousel:A carousel/slider JavaScript library for creating responsive and touch-friendly sliders.",
   },
   {
-    id: 2,
+    id: 11,
     image: AzSpeech,
     alt: "AzSpeech",
     link: "...",
@@ -397,11 +391,8 @@ const alasElement: Project[] = [
     description14: "",
     description15: "",
   },
-];
-
-const mstock: Project[] = [
   {
-    id: 1,
+    id: 12,
     image: MStock,
     alt: "MStock",
     link: "https://mstock.az/",
@@ -424,7 +415,7 @@ const mstock: Project[] = [
     description15: "",
   },
   {
-    id: 2,
+    id: 13,
     image: MayakCargo,
     alt: "MayakCargo",
     link: "https://cargo-pearl-chi.vercel.app/",
@@ -447,7 +438,7 @@ const mstock: Project[] = [
     description15: "",
   },
   {
-    id: 3,
+    id: 14,
     image: Minik,
     alt: "Minik",
     link: "https://main--minikk.netlify.app/",
@@ -470,7 +461,7 @@ const mstock: Project[] = [
     description15: "",
   },
   {
-    id: 4,
+    id: 15,
     image: MayakMebel,
     alt: "MayakMebel",
     link: "https://mayak-mebel.vercel.app/",
@@ -493,7 +484,7 @@ const mstock: Project[] = [
     description15: "",
   },
   {
-    id: 5,
+    id: 16,
     image: PutaLogistik,
     alt: "PutaLogistik",
     link: "https://puta-logistik.vercel.app/",
@@ -516,7 +507,7 @@ const mstock: Project[] = [
     description15: "",
   },
   {
-    id: 6,
+    id: 17,
     image: MenzilTap,
     alt: "MenzilTap",
     link: "https://main--menziltap.netlify.app/",
@@ -539,7 +530,7 @@ const mstock: Project[] = [
     description15: "",
   },
   {
-    id: 7,
+    id: 18,
     image: IndiTap,
     alt: "IndiTap",
     link: "https://main--inditap.netlify.app/",
@@ -562,7 +553,7 @@ const mstock: Project[] = [
     description15: "",
   },
   {
-    id: 8,
+    id: 19,
     image: MyWork,
     alt: "MyWork",
     link: "https://main--mywork-az.netlify.app/",
@@ -585,7 +576,7 @@ const mstock: Project[] = [
     description15: "",
   },
   {
-    id: 9,
+    id: 20,
     image: GlobalAptek,
     alt: "Global Aptek",
     link: "https://main--globalaptek.netlify.app/",
@@ -608,6 +599,12 @@ const mstock: Project[] = [
     description15: "",
   },
 ];
+
+const webrandyStartuup: Project[] = [];
+
+const alasElement: Project[] = [];
+
+const mstock: Project[] = [];
 // ----------------all-projects----------------
 const allProjects = [
   ...freelanceElement,
@@ -625,61 +622,13 @@ const length = [
     webrandyStartuup.length +
     freelanceElement.length,
 ];
-// ----------------------
-const freelanceWork: Company[] = [
-  {
-    id: 1,
-    image: FreelancerAzad,
-    alt: "Freelance",
-    description:
-      "Accepting additional work not only enriches my portfolio, but also promotes myself. React is my main preference for freelance projects, but I still consider the client's request as the main thing.",
-  },
-];
-
-const webrandyCompany: Company[] = [
-  {
-    id: 1,
-    image: Webrandy,
-    alt: "Webrandy Startup",
-    description:
-      "Here, we mainly developed the sites of clients that the manager contacted or found himself. I worked in this startup for some time and gained some experience.",
-  },
-];
-
-const alasCompany: Company[] = [
-  {
-    id: 1,
-    image: AlasEva,
-    alt: "Alas Development Center",
-    description:
-      "After completing the 6-month front-end developer training, selected students joined the 4-month internship program at Alas Development Center, and I was one of those students. I worked on 2 big projects in a 4-month internship program.",
-  },
-];
-
-const mstockCompany: Company[] = [
-  {
-    id: 1,
-    image: MStock,
-    alt: "MStock Company",
-    description:
-      "In this company, I prepare websites in vanilla according to the request of the manager. I don't use Libraries or frameworks as per the request of the manager. The company is new and I am developing websites to promote the company.",
-  },
-];
-
 export default function Projects() {
   const [openPopUp, setOpenPopUp] = useState(false);
-  const [aboutCompany, setAboutCompany] = useState(false);
   const [selectedProject, setSelectedProject] = useState<SelectedProject>(null);
-  const [selectedCompany, setSelectedCompany] = useState<SelectedCompany>(null);
 
   const handlePopUp = (project: Project) => {
     setSelectedProject(project);
     setOpenPopUp(true);
-  };
-
-  const handleAboutCompany = (project: Company) => {
-    setSelectedCompany(project);
-    setAboutCompany(true);
   };
 
   const closePopUp = () => {
@@ -687,36 +636,8 @@ export default function Projects() {
     setSelectedProject(null);
   };
 
-  const closeAboutCompany = () => {
-    setAboutCompany(false);
-  };
-
   return (
     <section className={styles.container}>
-      {/* -------------About-Company----------- */}
-      {aboutCompany && selectedCompany && (
-        <div className={styles.aboutCompanyContainer}>
-          <div className={styles.aboutCompanyElement}>
-            <h2>{selectedCompany.alt}</h2>
-            <div className={styles.imageCon}>
-              <Image
-                className={styles.images}
-                src={selectedCompany.image}
-                alt={selectedCompany.alt}
-                width={400}
-                height={400}
-                priority
-              />
-            </div>
-            <div className={styles.popUpTexts}>
-              <p>{selectedCompany.description}</p>
-            </div>
-            <div className={styles.buttonContainer}>
-              <button onClick={closeAboutCompany}>Back</button>
-            </div>
-          </div>
-        </div>
-      )}
       {/* -------------Pop-Up----------- */}
       {openPopUp && selectedProject && (
         <div className={styles.popUpContainer}>
@@ -769,104 +690,8 @@ export default function Projects() {
         <div className={styles.portfolioContainer}>
           {/* ---------------------- */}
           <ul className={styles.portfolioPart}>
-            {freelanceWork.map((element, index) => (
-              <li key={index}>
-                <h3>{element.alt}</h3>
-                <p onClick={() => handleAboutCompany(element)}>ⓘ</p>
-              </li>
-            ))}
             <li className={styles.elements}>
               {freelanceElement.map((element, index) => (
-                <div
-                  className={styles.imageContainer}
-                  key={index}
-                  onClick={() => handlePopUp(element)}
-                >
-                  <div className={styles.imageElement}>
-                    <Image
-                      className={styles.image}
-                      src={element.image}
-                      alt={element.alt}
-                      width={400}
-                      height={400}
-                      priority
-                    />
-                  </div>
-                  <p>{element.site}</p>
-                </div>
-              ))}
-            </li>
-          </ul>
-          {/* ---------------------- */}
-          <ul className={styles.portfolioPart}>
-            {webrandyCompany.map((element, index) => (
-              <li key={index}>
-                <h3>{element.alt}</h3>
-                <p onClick={() => handleAboutCompany(element)}>ⓘ</p>
-              </li>
-            ))}
-            <li className={styles.elements}>
-              {webrandyStartuup.map((element, index) => (
-                <div
-                  className={styles.imageContainer}
-                  key={index}
-                  onClick={() => handlePopUp(element)}
-                >
-                  <div className={styles.imageElement}>
-                    <Image
-                      className={styles.image}
-                      src={element.image}
-                      alt={element.alt}
-                      width={400}
-                      height={400}
-                      priority
-                    />
-                  </div>
-                  <p>{element.site}</p>
-                </div>
-              ))}
-            </li>
-          </ul>
-          {/* ---------------------- */}
-          <ul className={styles.portfolioPart}>
-            {alasCompany.map((element, index) => (
-              <li key={index}>
-                <h3>{element.alt}</h3>
-                <p onClick={() => handleAboutCompany(element)}>ⓘ</p>
-              </li>
-            ))}
-            <li className={styles.elements}>
-              {alasElement.map((element, index) => (
-                <div
-                  className={styles.imageContainer}
-                  key={index}
-                  onClick={() => handlePopUp(element)}
-                >
-                  <div className={styles.imageElement}>
-                    <Image
-                      className={styles.image}
-                      src={element.image}
-                      alt={element.alt}
-                      width={400}
-                      height={400}
-                      priority
-                    />
-                  </div>
-                  <p>{element.site}</p>
-                </div>
-              ))}
-            </li>
-          </ul>
-          {/* ---------------------- */}
-          <ul className={styles.portfolioPart}>
-            {mstockCompany.map((element, index) => (
-              <li key={index}>
-                <h3>{element.alt}</h3>
-                <p onClick={() => handleAboutCompany(element)}>ⓘ</p>
-              </li>
-            ))}
-            <li className={styles.elements}>
-              {mstock.map((element, index) => (
                 <div
                   className={styles.imageContainer}
                   key={index}
