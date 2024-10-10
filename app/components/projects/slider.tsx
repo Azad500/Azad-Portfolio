@@ -20,6 +20,7 @@ import AzadPortfolio from "../../../assets/projects/AzadPortfolio.png";
 import IndiTap from "../../../assets/projects/IndiTap.png";
 import MyWork from "../../../assets/projects/MyWork.png";
 import GlobalAptek from "../../../assets/projects/GlobalAptek.png";
+import Souvenir from "../../../assets/projects/Souvenir.png";
 
 const cardElements = [
   {
@@ -141,6 +142,12 @@ const cardElements = [
     image: GlobalAptek,
     alt: "Global Aptek",
     link: "https://main--globalaptek.netlify.app/",
+  },
+  {
+    id: 21,
+    image: Souvenir,
+    alt: "Monaliza Suvenir",
+    link: "",
   },
 ];
 const repeatedData = Array.from(

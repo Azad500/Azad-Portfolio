@@ -21,6 +21,7 @@ import AzadPortfolio from "../../../assets/projects/AzadPortfolio.png";
 import IndiTap from "../../../assets/projects/IndiTap.png";
 import MyWork from "../../../assets/projects/MyWork.png";
 import GlobalAptek from "../../../assets/projects/GlobalAptek.png";
+import Souvenir from "../../../assets/projects/Souvenir.png";
 import { useState } from "react";
 
 interface Project {
@@ -548,7 +549,7 @@ const allProjectsElements: Project[] = [
     image: MyWork,
     alt: "MyWork",
     link: "https://main--mywork-az.netlify.app/",
-    site: "MyWork.az",
+    site: "myWork.az",
     description1:
       "• According to the request of the manager, the site was developed in vanilla.",
     description2: "• I used different animations.",
@@ -571,7 +572,30 @@ const allProjectsElements: Project[] = [
     image: GlobalAptek,
     alt: "Global Aptek",
     link: "https://main--globalaptek.netlify.app/",
-    site: "GlobalAptek.az",
+    site: "globalAptek.az",
+    description1:
+      "• According to the request of the manager, the site was developed in vanilla.",
+    description2: "• I used different animations.",
+    description3: "• There is responsiveness.",
+    description4: "• More css and js functionality is preferred here.",
+    description5: "• This site will be connected to the backend in the future.",
+    description6: "",
+    description7: "",
+    description8: "",
+    description9: "",
+    description10: "",
+    description11: "",
+    description12: "",
+    description13: "",
+    description14: "",
+    description15: "",
+  },
+  {
+    id: 21,
+    image: Souvenir,
+    alt: "Monaliza Suvenir",
+    link: "",
+    site: "monalizaSuvenir.az",
     description1:
       "• According to the request of the manager, the site was developed in vanilla.",
     description2: "• I used different animations.",
