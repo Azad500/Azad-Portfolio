@@ -7,6 +7,9 @@
   @include responsive768 {
     display: none;
   }
+  .paused {
+    animation-play-state: paused !important;
+  }
   .firstSliderContainer {
     width: 250px;
     display: flex;
@@ -14,6 +17,9 @@
     box-sizing: border-box;
     padding-left: 25px;
     height: 100px;
+    @include responsive768to1350 {
+      width: 200px;
+    }
     .firstSliderElement {
       display: flex;
       flex-direction: column;
@@ -34,7 +40,7 @@
           display: flex;
           align-items: center;
           margin-bottom: 30px;
-          @include responsive768to1024 {
+          @include responsive768to1350 {
             width: 150px;
           }
           .image {
@@ -44,7 +50,7 @@
             object-fit: cover;
             transition: all 0.5s ease;
             cursor: pointer;
-            @include responsive768to1024 {
+            @include responsive768to1350 {
               width: 150px;
               height: 100px;
             }
@@ -63,8 +69,8 @@
     flex-direction: column;
     box-sizing: border-box;
     padding-left: 25px;
-    @include responsive768to1024 {
-      width: 350px;
+    @include responsive768to1350 {
+      width: 200px;
     }
     .secondSliderElement {
       display: flex;
@@ -84,7 +90,7 @@
         display: flex;
         align-items: center;
         margin-bottom: 30px;
-        @include responsive768to1024 {
+        @include responsive768to1350 {
           width: 150px;
         }
         .image {
@@ -94,7 +100,7 @@
           object-fit: cover;
           transition: all 0.5s ease;
           cursor: pointer;
-          @include responsive768to1024 {
+          @include responsive768to1350 {
             width: 150px;
             height: 100px;
           }
@@ -107,7 +113,7 @@
   }
   // -------------third-slider-----------
   .thirdSliderContainer {
-    @include responsive768to1440 {
+    @include responsive768to1024 {
       display: none;
     }
   }

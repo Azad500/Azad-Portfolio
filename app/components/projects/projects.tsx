@@ -21,7 +21,6 @@ import AzadPortfolio from "../../../assets/projects/AzadPortfolio.png";
 import IndiTap from "../../../assets/projects/IndiTap.png";
 import MyWork from "../../../assets/projects/MyWork.png";
 import GlobalAptek from "../../../assets/projects/GlobalAptek.png";
-import FreelancerAzad from "../../../assets/images/freelancerAzad.jpg";
 import { useState } from "react";
 
 interface Project {
@@ -54,17 +53,9 @@ type StaticImageData = {
   blurDataURL?: string;
 };
 
-interface Company {
-  id: number;
-  image: StaticImageData;
-  alt: string;
-  description: string;
-}
-
 type SelectedProject = Project | null;
-type SelectedCompany = Company | null;
 
-const freelanceElement: Project[] = [
+const allProjectsElements: Project[] = [
   {
     id: 1,
     image: GarantCompressor,
@@ -600,28 +591,11 @@ const freelanceElement: Project[] = [
   },
 ];
 
-const webrandyStartuup: Project[] = [];
-
-const alasElement: Project[] = [];
-
-const mstock: Project[] = [];
 // ----------------all-projects----------------
-const allProjects = [
-  ...freelanceElement,
-  ...webrandyStartuup,
-  ...alasElement,
-  ...mstock,
-];
 const allProjectsData = Array.from(
   { length: 30 },
-  (_, index) => allProjects[index % allProjects.length]
+  (_, index) => allProjectsElements[index % allProjectsElements.length]
 );
-const length = [
-  mstock.length +
-    alasElement.length +
-    webrandyStartuup.length +
-    freelanceElement.length,
-];
 export default function Projects() {
   const [openPopUp, setOpenPopUp] = useState(false);
   const [selectedProject, setSelectedProject] = useState<SelectedProject>(null);
@@ -685,13 +659,13 @@ export default function Projects() {
       <div className={styles.portfolioTexts}>
         <div className={styles.projectsHeaderText}>
           <h2>MY PROJECTS</h2>
-          <p>{length}</p>
+          <p>{allProjectsElements.length}</p>
         </div>
         <div className={styles.portfolioContainer}>
           {/* ---------------------- */}
           <ul className={styles.portfolioPart}>
             <li className={styles.elements}>
-              {freelanceElement.map((element, index) => (
+              {allProjectsElements.map((element, index) => (
                 <div
                   className={styles.imageContainer}
                   key={index}

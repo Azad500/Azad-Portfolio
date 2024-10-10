@@ -16,16 +16,17 @@
     justify-content: flex-start;
     gap: 50px;
     padding-left: 40px;
-    @include responsive768 {
+    @include responsive1024 {
       height: 90vh;
       gap: 10px;
       padding-left: 20px;
     }
+
     h2 {
       font-family: "Poppins";
       font-weight: bold;
       font-size: 70px;
-      @include responsive768 {
+      @include responsive1024 {
         font-size: 35px;
       }
     }
@@ -34,9 +35,12 @@
       font-family: "Poppins";
       font-size: 16px;
       text-align: justify;
-      @include responsive768 {
+      @include responsive1024 {
         width: 95%;
         font-size: 14px;
+      }
+      @include responsive1200to1300 {
+        width: 400px;
       }
     }
   }
@@ -54,17 +58,23 @@
     &::-webkit-scrollbar {
       display: none;
     }
-    @include responsive768 {
+    @include responsive1024 {
       padding: 0;
       align-items: center;
       height: 76vh;
       gap: 50px;
     }
+    @include responsive1024to1200 {
+      align-items: flex-end;
+    }
+    @include responsive1200to1300 {
+      padding-right: 70px;
+    }
     .sliderTransparent {
       width: 700px;
       padding: 200px 0;
       position: relative;
-      @include responsive768 {
+      @include responsive1024 {
         width: 300px;
         height: 300px;
       }
@@ -73,25 +83,34 @@
       width: 700px;
       height: 400px;
       position: relative;
-      @include responsive768 {
+      @include responsive1024 {
         width: 302px;
         height: 252px;
         border: 1px solid black;
         border-radius: 30px;
+      }
+      @include responsive1024to1200 {
+        width: 300px;
+        height: 240px;
       }
       .educationImageElement {
         width: 750px;
         height: 450px;
         border-radius: 30px;
         position: relative;
-        @include responsive768 {
+        @include responsive1024 {
           width: 300px;
           height: 250px;
           background-color: black;
         }
+        @include responsive1024to1200 {
+          width: 300px;
+          height: 240px;
+          background-color: black;
+        }
         .overElement {
           display: none;
-          @include responsive768 {
+          @include responsiveMax1200 {
             position: absolute;
             top: 7px;
             width: 100%;
@@ -111,7 +130,7 @@
         }
         .overlay {
           display: none;
-          @include responsive768 {
+          @include responsiveMax1200 {
             display: block;
             position: absolute;
             top: 0;
@@ -127,13 +146,14 @@
           height: 450px;
           object-fit: cover;
           border-radius: 30px;
-          @include responsive768 {
-            height: 250px;
+          @include responsiveMax1200 {
+            height: 240px;
+            border-radius: 25px;
           }
         }
         .detail {
           display: none;
-          @include responsive768 {
+          @include responsiveMax1200 {
             display: block;
             position: absolute;
             bottom: 5%;
@@ -159,7 +179,7 @@
         width: 450px;
         height: 450px;
         border-radius: 30px;
-        @include responsive768 {
+        @include responsiveMax1200 {
           display: none;
         }
         .educationCart {
@@ -184,7 +204,7 @@
         z-index: 1;
         h2 {
           font-size: 20px;
-          @include responsive768 {
+          @include responsiveMax1200 {
             font-size: 18px;
           }
         }
@@ -193,7 +213,7 @@
         }
         p {
           width: 320px;
-          @include responsive768 {
+          @include responsiveMax1200 {
             width: 280px;
           }
         }
@@ -212,7 +232,7 @@
         bottom: unset;
       }
       .webEducationText {
-        @include responsive768 {
+        @include responsiveMax1200 {
           display: none;
         }
       }
@@ -221,15 +241,15 @@
       position: sticky;
       top: 20%;
       z-index: 2;
-      @include responsive768 {
-        margin-bottom: 120px;
-      }
     }
     .sliderElement:nth-of-type(2) {
       position: sticky;
       top: 20%;
       z-index: 3;
-      margin-top: 170px;
+      margin-top: 180px;
+      @include responsive1024 {
+        margin-top: 110px;
+      }
     }
     .sliderElement:nth-of-type(3) {
       position: sticky;
