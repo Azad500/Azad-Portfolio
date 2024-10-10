@@ -224,6 +224,15 @@
             }
           }
         }
+        &:last-child {
+          padding-bottom: 150px;
+          .workLogo {
+            bottom: 100px;
+            @include responsive768 {
+              bottom: 90px;
+            }
+          }
+        }
       }
     }
   }
