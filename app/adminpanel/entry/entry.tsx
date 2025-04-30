@@ -30,22 +30,23 @@ const Entry: React.FC = () => {
       [name]: value,
     }));
   };
-  // ----------------fetch-----------------
-  async function dataPostForEntry(data: typeof formData) {
-    try {
-      const response = await api.post("entryElement", data);
 
+  // ----------------fetch-----------------
+  async function dataUpdateForEntry(id: string, data: typeof formData) {
+    try {
+      const response = await api.patch(`entry/${id}`, data); // Mevcut veriyi güncellemek için PATCH isteği gönder
       if (response.status < 200 || response.status >= 300) {
         throw new Error("Network response was not ok");
       }
-      // console.log("Data successfully posted:", response.data);
+      console.log("Data successfully updated:", response.data);
     } catch (error) {
-      console.error("Error posting data:", error);
+      console.error("Error updating data:", error);
     }
   }
 
-  const handleSubmit = () => {
-    dataPostForEntry(formData);
+  const handleSubmit = async () => {
+    const entryId = "your-existing-entry-id"; // Güncellemek istediğiniz verinin id'sini buraya yazın
+    await dataUpdateForEntry(entryId, formData); // Veriyi güncelle
   };
 
   return (
@@ -55,7 +56,7 @@ const Entry: React.FC = () => {
           <h2>Hello, I am : </h2>
           <input
             type="text"
-            name="text"
+            name="title"
             id="text"
             value={formData.title}
             onChange={handleInputChange}

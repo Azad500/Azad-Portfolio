@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://66a53e265dc27a3c190b0696.mockapi.io/adminPanel/",
+  baseURL: "http://localhost:3001/",
   headers: {
     "Content-Type": "application/json",
   },

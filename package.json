@@ -17,6 +17,7 @@
     "@types/next": "^9.0.0",
     "axios": "^1.7.2",
     "browser-image-compression": "^2.0.2",
+    "express": "^4.21.1",
     "framer-motion": "^11.2.11",
     "gsap": "^3.12.5",
     "next": "14.2.3",
@@ -27,7 +28,7 @@
     "react-fullpage": "^0.1.19",
     "react-router-dom": "^6.23.1",
     "react-scroll": "^1.9.0",
-    "sass": "^1.77.5"
+    "sass": "^1.87.0"
   },
   "devDependencies": {
     "@types/node": "^20.14.6",

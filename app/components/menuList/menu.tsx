@@ -1,6 +1,7 @@
 import styles from "./menu.module.scss";
 import AzerbaijanFlag from "../../../assets/images/azerbaijan.png";
 import EnglishFlag from "../../../assets/images/english.png";
+import NorwayFlag from "../../../assets/images/norway.png";
 import Image from "next/image";
 
 interface MenuListProps {
@@ -55,6 +56,17 @@ export default function MenuList({
               priority
             />
             <p>ENG</p>
+          </li>
+          <li>
+            <Image
+              className={styles.langImage}
+              src={NorwayFlag}
+              alt="Norwegian"
+              width={20}
+              height={20}
+              priority
+            />
+            <p>NOV</p>
           </li>
         </ul>
         <p className={styles.xIcon} onClick={toggleMenu}>

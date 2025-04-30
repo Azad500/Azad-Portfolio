@@ -1,8 +1,7 @@
 "use client";
 import styles from "./about.module.scss";
 import AboutMeImage from "../../../assets/images/about.png";
-import BlackLogo from "../../../assets/images/blackLogo.png";
-import Circle from "../../../assets/images/yellowCircle.png";
+import YellowCircle from "../../../assets/images/yellowCircle2.png";
 import Image from "next/image";
 
 export default function About() {
@@ -25,7 +24,7 @@ export default function About() {
         <div className={styles.circle}>
           <Image
             className={styles.circleImage}
-            src={Circle}
+            src={YellowCircle}
             alt="Circle"
             width={700}
             height={700}

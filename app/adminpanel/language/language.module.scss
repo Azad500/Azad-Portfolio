@@ -85,8 +85,10 @@
           color: white;
           font-family: "Poppins";
           font-weight: 500;
+          width: 160px;
           @include responsive1024 {
             font-size: 14px;
+            width: 100px;
           }
         }
         .btn {
@@ -110,6 +112,7 @@
         input {
           color: white;
           visibility: hidden;
+          width: 100px;
         }
       }
       div:last-child {
